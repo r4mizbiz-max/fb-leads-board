@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:36px 44px;display:flex;flex-direction:column}
+.header{margin-bottom:20px}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#EF4444;font-weight:700;margin-bottom:8px}
+h2{font-size:36px;font-weight:800;line-height:1.15}
+h2 span{color:#EF4444}
+.pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1}
+.pain{border-radius:14px;padding:22px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.pain::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.pain.p1{background:linear-gradient(135deg,#1a0a0a,#291015);border:1px solid rgba(239,68,68,0.2)}
+.pain.p1::before{background:linear-gradient(90deg,#EF4444,#DC2626)}
+.pain.p2{background:linear-gradient(135deg,#1a0f0a,#29150a);border:1px solid rgba(234,179,8,0.2)}
+.pain.p2::before{background:linear-gradient(90deg,#EAB308,#CA8A04)}
+.pain.p3{background:linear-gradient(135deg,#0a0f1a,#0a1529);border:1px solid rgba(59,130,246,0.2)}
+.pain.p3::before{background:linear-gradient(90deg,#3B82F6,#2563EB)}
+.pain.p4{background:linear-gradient(135deg,#1a0a1a,#200a29);border:1px solid rgba(168,85,247,0.2)}
+.pain.p4::before{background:linear-gradient(90deg,#A855F7,#7C3AED)}
+.pain .icon{font-size:32px;margin-bottom:10px}
+.pain h3{font-size:20px;font-weight:800;color:#F9FAFB;line-height:1.25;margin-bottom:10px}
+.pain .scenario{font-size:14px;color:#D1D5DB;line-height:1.55;margin-bottom:auto}
+.pain .stat{display:flex;align-items:center;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.06)}
+.pain .stat .num{font-size:28px;font-weight:900}
+.pain.p1 .stat .num{color:#EF4444}
+.pain.p2 .stat .num{color:#EAB308}
+.pain.p3 .stat .num{color:#3B82F6}
+.pain.p4 .stat .num{color:#A855F7}
+.pain .stat .context{font-size:12px;color:#6B7280;line-height:1.4}
+.bottom{margin-top:14px;text-align:center;font-size:15px;color:#4B5563;display:flex;align-items:center;justify-content:center;gap:8px}
+.bottom span{color:#10B981;font-weight:700;font-size:16px}
+</style></head><body>
+<div class="header">
+  <div class="tag">Before You Click Away</div>
+  <h2>This is what's happening to your business<br><span>right now while you're watching this video</span></h2>
+</div>
+<div class="pain-grid">
+  <div class="pain p1">
+    <div class="icon">📱</div>
+    <h3>A homeowner in your area just searched for what you do. They hired your competitor.</h3>
+    <div class="scenario">They were sitting on their couch, saw a Facebook ad from another contractor, filled out a form, got a call in 30 seconds, and booked an estimate. You never even knew they existed.</div>
+    <div class="stat">
+      <div class="num">78%</div>
+      <div class="context">of homeowners hire the first<br>contractor who responds</div>
+    </div>
+  </div>
+  <div class="pain p2">
+    <div class="icon">💸</div>
+    <h3>You're paying for a truck, crew, and insurance whether the phone rings or not.</h3>
+    <div class="scenario">Slow months don't mean low expenses. They mean the same $8K-15K overhead going out the door with nothing coming in. Every empty week is money you burned.</div>
+    <div class="stat">
+      <div class="num">$12K</div>
+      <div class="context">average monthly overhead for a<br>small home service business</div>
+    </div>
+  </div>
+  <div class="pain p3">
+    <div class="icon">🤷</div>
+    <h3>Word of mouth used to be enough. It's not 2015 anymore.</h3>
+    <div class="scenario">Your last 5-star customer told their neighbor. Their neighbor Googled you, saw no reviews, no website, no ads — and went with the guy who showed up in their Facebook feed with before/after photos.</div>
+    <div class="stat">
+      <div class="num">3 in 4</div>
+      <div class="context">homeowners find their contractor<br>online, not from referrals</div>
+    </div>
+  </div>
+  <div class="pain p4">
+    <div class="icon">😤</div>
+    <h3>You're the best in your area but nobody knows it.</h3>
+    <div class="scenario">You do better work, show up on time, and actually finish the job. But the guy with worse work and a Facebook ad is booked 6 weeks out, and you're waiting for a call that might not come.</div>
+    <div class="stat">
+      <div class="num">6 weeks</div>
+      <div class="context">average backlog for contractors<br>running ads properly</div>
+    </div>
+  </div>
+</div>
+<div class="bottom">Every one of these is fixable. <span>↓ Keep scrolling.</span></div>
+</body></html>
