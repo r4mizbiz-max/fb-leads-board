@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_styles.css">
+<style>
+.header { position: absolute; top: 58px; left: 80px; right: 80px; z-index: 5; display: flex; justify-content: space-between; align-items: flex-end; }
+.header .left .num-big { font-family: var(--serif); font-style: italic; font-size: 80px; line-height: 0.9; color: var(--red); letter-spacing: -0.02em; }
+.header .left .kicker { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.header .right h2 { font-family: var(--serif); font-size: 64px; line-height: 0.95; letter-spacing: -0.02em; text-align: right; }
+.header .right h2 i { color: var(--red); }
+
+.body { position: absolute; top: 260px; left: 80px; right: 80px; bottom: 140px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; }
+
+.cols { display: flex; flex-direction: column; gap: 22px; }
+.row { padding: 18px 22px; background: var(--elev); border: 1px solid var(--line); border-left: 3px solid var(--red); border-radius: 10px; }
+.row .l { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 6px; }
+.row .t { font-size: 17px; line-height: 1.45; color: var(--text); }
+
+.viz { position: relative; background: var(--elev); border: 1px solid var(--line); border-radius: 14px; padding: 28px; overflow: hidden; }
+.viz .viz-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
+.viz .lead-card { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; background: #1a1a1a; border: 1px solid var(--red); border-radius: 8px; font-size: 13px; color: var(--red); font-weight: 600; }
+.viz .lead-card::before { content: ''; width: 8px; height: 8px; background: var(--red); border-radius: 50%; }
+.viz .arrow-down { margin: 18px 0 14px; text-align: center; font-family: var(--serif); font-size: 28px; color: var(--red); font-style: italic; }
+.viz .chasers { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.viz .chasers .c { aspect-ratio: 1; background: #1a1a1a; border: 1px solid var(--line); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--muted); font-weight: 600; letter-spacing: 1px; }
+.viz .chasers .c.you { border-color: var(--accent); color: var(--accent); }
+.viz .punch { margin-top: 20px; padding-top: 18px; border-top: 1px dashed var(--line); font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--text); line-height: 1.2; letter-spacing: -0.01em; }
+.viz .punch b { color: var(--red); font-weight: 400; }
+
+.stat-strip { position: absolute; bottom: 70px; left: 80px; right: 80px; display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 16px; }
+.stat-strip .s .v { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; color: var(--red); }
+.stat-strip .s .k { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+
+<div class="card-num">04 <span>/</span> 10</div>
+
+<div class="header">
+  <div class="left">
+    <div class="kicker">The Playbook / Scam</div>
+    <div class="num-big">№ 01</div>
+  </div>
+  <div class="right">
+    <h2>The <i>"exclusive"</i><br>lead.</h2>
+  </div>
+</div>
+
+<div class="body">
+  <div class="cols">
+    <div class="row">
+      <div class="l">How it works</div>
+      <div class="t">Homeowner fills one form on Angi / HomeAdvisor / 33 Mile Radius. That form is simultaneously sold to 4 – 10 contractors in your zip.</div>
+    </div>
+    <div class="row">
+      <div class="l">What it really costs</div>
+      <div class="t">You're the 7th call. They already have 3 estimates. You paid $75 for a conversation that was over before it started.</div>
+    </div>
+    <div class="row">
+      <div class="l">The tell</div>
+      <div class="t">Lead "goes cold" within 20 minutes. Because it does. Because someone else already closed it.</div>
+    </div>
+  </div>
+
+  <div class="viz">
+    <div class="viz-label">· One lead · Ten contractors</div>
+    <div class="lead-card">FORM #A2947 · $240 JOB INTENT</div>
+    <div class="arrow-down">↓ sold to ↓</div>
+    <div class="chasers">
+      <div class="c">C1</div><div class="c">C2</div><div class="c">C3</div><div class="c">C4</div><div class="c">C5</div>
+      <div class="c">C6</div><div class="c you">YOU</div><div class="c">C8</div><div class="c">C9</div><div class="c">C10</div>
+    </div>
+    <div class="punch">Sold for <b>$75</b> ten times.<br>That's <b>$750 of revenue</b> from one homeowner.</div>
+  </div>
+</div>
+
+<div class="stat-strip">
+  <div class="s"><div class="v">4–10×</div><div class="k">Contractors per "exclusive" lead</div></div>
+  <div class="s"><div class="v">&lt;20 min</div><div class="k">Typical window before it's cold</div></div>
+  <div class="s"><div class="v">$75–$120</div><div class="k">Per dead-end phone call</div></div>
+  <div class="s"><div class="v">10×</div><div class="k">What they make off you</div></div>
+</div>
+
+<div class="brand"><span class="dot"></span><span>Rambitious Media</span></div>
+</body>
+</html>

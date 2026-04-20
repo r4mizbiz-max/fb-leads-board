@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_styles.css">
+<style>
+.wrap { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 0 100px; }
+.eyebrow { display: flex; align-items: center; gap: 14px; margin-bottom: 36px; }
+.eyebrow .tag { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); }
+.eyebrow .line { flex: 1; height: 1px; background: linear-gradient(to right, var(--accent), transparent); max-width: 140px; }
+h1 { font-family: var(--serif); font-size: 104px; line-height: 0.95; letter-spacing: -0.025em; margin-bottom: 28px; }
+h1 .slant { font-style: italic; color: var(--accent); }
+.sub { font-family: var(--serif); font-size: 42px; font-style: italic; color: var(--muted); margin-bottom: 56px; letter-spacing: -0.01em; }
+.sub span { color: var(--text); }
+.tags { display: flex; gap: 10px; flex-wrap: wrap; }
+.tag-pill { padding: 8px 16px; border: 1px solid var(--line); border-radius: 99px; font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+.glow { position: absolute; top: 50%; left: -10%; transform: translateY(-50%); width: 900px; height: 900px; background: radial-gradient(circle, rgba(255,107,53,0.06), transparent 60%); pointer-events: none; }
+.num { position: absolute; bottom: 36px; left: 40px; font-family: var(--serif); font-size: 18px; font-style: italic; color: var(--dim); }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="glow"></div>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+
+<div class="wrap">
+  <div class="eyebrow">
+    <span class="tag">// Rambitious Playbook · Vol. 01</span>
+    <span class="line"></span>
+  </div>
+  <h1>Lead Gen Companies<br>Are <span class="slant">Scamming</span><br>Contractors.</h1>
+  <div class="sub">Here's <span>the playbook</span> — and how to stop paying for it.</div>
+  <div class="tags">
+    <span class="tag-pill">HVAC</span>
+    <span class="tag-pill">Roofing</span>
+    <span class="tag-pill">Decks</span>
+    <span class="tag-pill">Fencing</span>
+    <span class="tag-pill">Windows</span>
+    <span class="tag-pill">Kitchen &amp; Bath</span>
+  </div>
+</div>
+
+<div class="num">01 / 10</div>
+<div class="brand"><span class="dot"></span><span>Rambitious Media</span></div>
+</body>
+</html>

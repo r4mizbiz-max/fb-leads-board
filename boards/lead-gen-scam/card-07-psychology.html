@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_styles.css">
+<style>
+.header { position: absolute; top: 60px; left: 80px; right: 80px; z-index: 5; }
+.header .kicker { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+.header h2 { font-family: var(--serif); font-size: 58px; line-height: 1; letter-spacing: -0.02em; }
+.header h2 i { color: var(--muted); font-style: italic; }
+
+.grid { position: absolute; top: 220px; left: 80px; right: 80px; bottom: 130px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 22px; }
+
+.tile { background: var(--elev); border: 1px solid var(--line); border-radius: 14px; padding: 28px; position: relative; overflow: hidden; }
+.tile .n { font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--accent); line-height: 1; letter-spacing: -0.02em; margin-bottom: 10px; }
+.tile h3 { font-family: var(--serif); font-size: 36px; line-height: 1; letter-spacing: -0.02em; margin-bottom: 14px; }
+.tile h3 i { color: var(--accent); }
+.tile p { font-size: 15px; line-height: 1.5; color: var(--muted); max-width: 420px; }
+.tile p b { color: var(--text); font-weight: 600; }
+.tile .voice { position: absolute; bottom: 22px; right: 22px; left: 22px; font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--dim); padding-top: 14px; border-top: 1px dashed var(--line); }
+.tile .voice::before { content: '"'; color: var(--accent); }
+.tile .voice::after { content: '"'; color: var(--accent); }
+
+.accent-dot { position: absolute; top: 22px; right: 22px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+
+.footer-line { position: absolute; bottom: 65px; left: 80px; right: 80px; text-align: center; font-family: var(--serif); font-size: 22px; font-style: italic; color: var(--muted); letter-spacing: -0.01em; }
+.footer-line b { color: var(--text); font-style: normal; font-family: var(--sans); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+
+<div class="card-num">07 <span>/</span> 10</div>
+
+<div class="header">
+  <div class="kicker">// Why it keeps working on us</div>
+  <h2>Smart contractors keep paying. <i>Here's why.</i></h2>
+</div>
+
+<div class="grid">
+  <div class="tile">
+    <div class="accent-dot"></div>
+    <div class="n">i.</div>
+    <h3><i>Sunk cost.</i></h3>
+    <p>You've already spent <b>$4,200</b>. Stopping now means admitting the money was wasted. So you keep feeding it — hoping the next lead will be "the one."</p>
+    <div class="voice">I've got too much in to quit now.</div>
+  </div>
+
+  <div class="tile">
+    <div class="accent-dot"></div>
+    <div class="n">ii.</div>
+    <h3><i>Shiny dashboards.</i></h3>
+    <p>Rising line graphs. Green status badges. "3 new matches!" notifications every hour. Your brain reads it as <b>progress</b>. It's motion, not traction.</p>
+    <div class="voice">It's working — look at all the activity!</div>
+  </div>
+
+  <div class="tile">
+    <div class="accent-dot"></div>
+    <div class="n">iii.</div>
+    <h3><i>Manufactured urgency.</i></h3>
+    <p>"3 contractors notified. Claim now." Same psychology as slot machines. Keeps you on the app, keeps you clicking, keeps the <b>credits draining</b>.</p>
+    <div class="voice">Let me grab this one before someone else does.</div>
+  </div>
+
+  <div class="tile">
+    <div class="accent-dot"></div>
+    <div class="n">iv.</div>
+    <h3><i>Isolation.</i></h3>
+    <p>Nobody told you a better model exists. Every agency that called you sold the same promise — "we'll get you leads." So you assume <b>this is just the game</b>.</p>
+    <div class="voice">Guess this is just how it works now.</div>
+  </div>
+</div>
+
+<div class="footer-line">It's not you. <b>The system is designed to feel like it's working.</b></div>
+
+<div class="brand"><span class="dot"></span><span>Rambitious Media</span></div>
+</body>
+</html>

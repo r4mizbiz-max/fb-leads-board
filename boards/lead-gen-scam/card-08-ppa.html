@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_styles.css">
+<style>
+.wrap { position: absolute; inset: 0; }
+
+.header { position: absolute; top: 60px; left: 80px; right: 80px; display: flex; justify-content: space-between; align-items: flex-end; }
+.header .kicker { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--green); margin-bottom: 14px; }
+.header h2 { font-family: var(--serif); font-size: 66px; line-height: 0.95; letter-spacing: -0.02em; }
+.header h2 i { color: var(--green); }
+.header .tagline { text-align: right; font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--muted); max-width: 340px; line-height: 1.25; }
+
+.body { position: absolute; top: 230px; left: 80px; right: 80px; bottom: 110px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+.left { display: flex; flex-direction: column; gap: 14px; }
+.item { display: grid; grid-template-columns: 28px 1fr; gap: 16px; align-items: start; padding: 16px 18px; background: var(--elev); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 10px; }
+.item .check { width: 24px; height: 24px; background: var(--green-dim); color: var(--green); border: 1px solid rgba(16,185,129,0.3); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; margin-top: 2px; }
+.item .txt .t { font-family: var(--sans); font-weight: 700; font-size: 16px; margin-bottom: 4px; letter-spacing: -0.01em; }
+.item .txt .d { font-size: 13px; color: var(--muted); line-height: 1.45; }
+
+.calendar { background: var(--elev); border: 1px solid var(--line); border-radius: 14px; padding: 24px; position: relative; overflow: hidden; }
+.cal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.cal-header .m { font-family: var(--serif); font-size: 20px; font-style: italic; letter-spacing: -0.01em; }
+.cal-header .wk { font-size: 11px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+.slots { display: flex; flex-direction: column; gap: 8px; }
+.slot { display: grid; grid-template-columns: 80px 1fr auto; gap: 14px; align-items: center; padding: 10px 14px; background: #141414; border: 1px solid var(--line); border-radius: 8px; }
+.slot.booked { border-color: rgba(16,185,129,0.35); background: rgba(16,185,129,0.06); }
+.slot .time { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 1px; }
+.slot.booked .time { color: var(--green); }
+.slot .who { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; }
+.slot .who .sub { font-size: 11px; color: var(--muted); font-weight: 400; display: block; margin-top: 1px; }
+.slot .status { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; }
+.slot.booked .status { background: var(--green); color: #000; }
+.cal-footer { margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--line); font-size: 11px; color: var(--muted); display: flex; justify-content: space-between; }
+.cal-footer b { color: var(--green); font-weight: 700; }
+
+.green-glow { position: absolute; bottom: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(16,185,129,0.08), transparent 60%); pointer-events: none; z-index: 1; }
+
+.footer-line { position: absolute; bottom: 50px; left: 80px; right: 80px; text-align: center; font-family: var(--serif); font-size: 24px; font-style: italic; color: var(--muted); letter-spacing: -0.01em; }
+.footer-line b { color: var(--green); font-style: normal; font-family: var(--sans); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="green-glow"></div>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+
+<div class="card-num" style="color: var(--green);">08 <span style="color: var(--green);">/</span> 10</div>
+
+<div class="header">
+  <div>
+    <div class="kicker">// The honest alternative</div>
+    <h2>Here's what<br><i>actually works.</i></h2>
+  </div>
+  <div class="tagline">Pay-per-appointment.<br>Exclusive. No contracts.</div>
+</div>
+
+<div class="body">
+  <div class="left">
+    <div class="item">
+      <div class="check">✓</div>
+      <div class="txt">
+        <div class="t">Pay only when someone shows up.</div>
+        <div class="d">Not per lead. Not per click. Per confirmed appointment on your calendar.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="check">✓</div>
+      <div class="txt">
+        <div class="t">One contractor per zip code.</div>
+        <div class="d">Genuinely exclusive. Not "exclusive" like Angi calls it. No one else is pitching your homeowner.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="check">✓</div>
+      <div class="txt">
+        <div class="t">Real appointments. Confirmed.</div>
+        <div class="d">Our team talks to them first. Wrong-fit homeowners never land on your calendar.</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="check">✓</div>
+      <div class="txt">
+        <div class="t">Month-to-month. Zero lock-in.</div>
+        <div class="d">If it doesn't work, you leave. No contracts, no credits, no cancellation fees.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calendar">
+    <div class="cal-header">
+      <div class="m">Thu · Apr 23</div>
+      <div class="wk">This week</div>
+    </div>
+    <div class="slots">
+      <div class="slot booked"><span class="time">9:00 AM</span><span class="who">Martinez family<span class="sub">Kitchen remodel · 1240 Oak Ln</span></span><span class="status">Confirmed</span></div>
+      <div class="slot booked"><span class="time">11:30 AM</span><span class="who">Reyes, Dan<span class="sub">Fence replacement · 55 Elm St</span></span><span class="status">Confirmed</span></div>
+      <div class="slot booked"><span class="time">2:00 PM</span><span class="who">Patel residence<span class="sub">Roof inspection · 890 Hill Rd</span></span><span class="status">Confirmed</span></div>
+      <div class="slot booked"><span class="time">4:30 PM</span><span class="who">Khan, Sara<span class="sub">HVAC estimate · 312 Pine Ave</span></span><span class="status">Confirmed</span></div>
+    </div>
+    <div class="cal-footer">
+      <span>Appointments this week</span>
+      <span><b>12 booked · 0 no-shows</b></span>
+    </div>
+  </div>
+</div>
+
+<div class="footer-line">Same budget. <b>Real calendar.</b> No more chasing ghosts.</div>
+
+<div class="brand"><span class="dot" style="background: var(--green); box-shadow: 0 0 12px var(--green);"></span><span>Rambitious Media</span></div>
+</body>
+</html>

@@ -28,6 +28,9 @@ html,body{height:100%;overflow:hidden;background:var(--bg);font-family:'Segoe UI
 .board-card .preview{height:200px;background:var(--surface);display:flex;gap:4px;padding:12px;overflow:hidden}
 .board-card .preview img{height:100%;border-radius:6px;flex-shrink:0;opacity:0.8}
 .board-card:hover .preview img{opacity:1}
+.board-card .preview-thumb{height:100%;aspect-ratio:3/2;border-radius:6px;flex-shrink:0;opacity:0.8;overflow:hidden;position:relative;background:#0a0a0a}
+.board-card .preview-thumb iframe{position:absolute;top:0;left:0;width:1200px;height:800px;border:0;transform:scale(0.235);transform-origin:0 0;pointer-events:none}
+.board-card:hover .preview-thumb{opacity:1}
 .board-card .info{padding:20px 24px}
 .board-card .info .badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;text-transform:uppercase;letter-spacing:1px;font-weight:700;padding:4px 10px;border-radius:6px;margin-bottom:10px}
 .board-card .info .badge.green{background:rgba(16,185,129,0.1);color:var(--green)}
@@ -165,6 +168,27 @@ html,body{height:100%;overflow:hidden;background:var(--bg);font-family:'Segoe UI
 // =============== BOARD REGISTRY ===============
 const BOARDS = [
   {
+    id: 'lead-gen-scam',
+    title: 'Lead Gen Companies Are Scamming Contractors',
+    desc: 'YouTube video board — tears down the lead gen industry playbook (Angi, HomeAdvisor, 33 Mile Radius) and pitches the pay-per-appointment alternative.',
+    badge: 'YouTube Video',
+    badgeClass: 'purple',
+    date: 'Apr 2026',
+    folder: 'boards/lead-gen-scam',
+    cards: [
+      { file: 'card-01-title.html', label: 'TITLE' },
+      { file: 'card-02-hook.html', label: 'SOUND FAMILIAR?' },
+      { file: 'card-03-reframe.html', label: 'LEAD vs APPOINTMENT' },
+      { file: 'card-04-scam-shared.html', label: 'SCAM #1 · SHARED' },
+      { file: 'card-05-scam-credits.html', label: 'SCAM #2 · CREDITS' },
+      { file: 'card-06-scam-volume.html', label: 'SCAM #3 · VOLUME' },
+      { file: 'card-07-psychology.html', label: 'WHY WE FALL FOR IT' },
+      { file: 'card-08-ppa.html', label: 'PAY-PER-APPOINTMENT' },
+      { file: 'card-09-partnership.html', label: 'THE PARTNERSHIP' },
+      { file: 'card-10-cta.html', label: 'CTA' },
+    ]
+  },
+  {
     id: 'fb-leads-contractors',
     title: 'The Honest Truth About Facebook Leads',
     desc: 'For contractors — plain english, pain points, no marketing jargon. Hits hard on what they\'re losing by not running ads.',
@@ -217,10 +241,15 @@ function renderMenu() {
     const card = document.createElement('div');
     card.className = 'board-card';
     card.onclick = () => openBoard(b.id);
-    // Preview images
+    // Preview images (or iframe thumbnails for html boards)
     let previewHTML = '<div class="preview">';
     b.cards.slice(0, 5).forEach(c => {
-      previewHTML += `<img src="${b.folder}/${c.file}" alt="${c.label}" draggable="false">`;
+      const src = `${b.folder}/${c.file}`;
+      if (c.file.endsWith('.html')) {
+        previewHTML += `<div class="preview-thumb"><iframe src="${src}" scrolling="no"></iframe></div>`;
+      } else {
+        previewHTML += `<img src="${src}" alt="${c.label}" draggable="false">`;
+      }
     });
     previewHTML += '</div>';
     card.innerHTML = previewHTML + `
@@ -292,11 +321,19 @@ function buildBoard() {
     frame.style.left = x + 'px';
     frame.style.width = CARD_W + 'px';
     frame.style.height = CARD_H + 'px';
-    const img = document.createElement('img');
-    img.src = currentBoard.folder + '/' + card.file;
-    img.alt = card.label;
-    img.draggable = false;
-    frame.appendChild(img);
+    const src = currentBoard.folder + '/' + card.file;
+    if (card.file.endsWith('.html')) {
+      const iframe = document.createElement('iframe');
+      iframe.src = src;
+      iframe.style.cssText = 'width:1200px;height:800px;border:0;display:block;pointer-events:none';
+      frame.appendChild(iframe);
+    } else {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = card.label;
+      img.draggable = false;
+      frame.appendChild(img);
+    }
     canvas.appendChild(frame);
   });
 

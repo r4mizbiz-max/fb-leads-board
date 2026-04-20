@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="_styles.css">
+<style>
+.header { position: absolute; top: 58px; left: 80px; right: 80px; z-index: 5; display: flex; justify-content: space-between; align-items: flex-end; }
+.header .left .num-big { font-family: var(--serif); font-style: italic; font-size: 80px; line-height: 0.9; color: var(--red); letter-spacing: -0.02em; }
+.header .left .kicker { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.header .right h2 { font-family: var(--serif); font-size: 64px; line-height: 0.95; letter-spacing: -0.02em; text-align: right; }
+.header .right h2 i { color: var(--red); }
+
+.body { position: absolute; top: 240px; left: 80px; right: 80px; bottom: 140px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+.dash { background: var(--elev); border: 1px solid var(--line); border-radius: 14px; padding: 22px; position: relative; overflow: hidden; }
+.dash .dhead { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.dash .dhead .t { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+.dash .dhead .stamp { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 9px; border-radius: 4px; }
+.dash.fake .dhead .stamp { background: var(--red-dim); color: var(--red); border: 1px solid rgba(239,68,68,0.3); }
+.dash.real .dhead .stamp { background: var(--green-dim); color: var(--green); border: 1px solid rgba(16,185,129,0.3); }
+
+.big-num { font-family: var(--sans); font-size: 72px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
+.dash.fake .big-num { color: var(--red); }
+.dash.real .big-num { color: var(--green); }
+.big-label { font-size: 11px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; }
+
+.chart { height: 60px; display: flex; align-items: flex-end; gap: 3px; margin-bottom: 18px; border-bottom: 1px dashed var(--line); padding-bottom: 8px; }
+.chart .bar { flex: 1; border-radius: 2px 2px 0 0; }
+.dash.fake .chart .bar { background: var(--red); }
+.dash.real .chart .bar { background: var(--green); }
+
+.feed { font-family: ui-monospace, Menlo, monospace; font-size: 11px; line-height: 1.7; color: var(--muted); }
+.feed .row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.04); }
+.feed .row .tag { font-weight: 700; letter-spacing: 1px; }
+.dash.fake .feed .tag { color: var(--red); }
+.dash.real .feed .tag { color: var(--green); }
+.feed .row .detail { color: var(--dim); }
+
+.breakdown { position: absolute; bottom: 18px; left: 22px; right: 22px; display: flex; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--line); font-size: 10px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+.breakdown b { color: var(--text); font-size: 13px; font-weight: 700; display: block; }
+.dash.fake .breakdown b { color: var(--red); }
+.dash.real .breakdown b { color: var(--green); }
+
+.footer-callout { position: absolute; bottom: 70px; left: 80px; right: 80px; text-align: center; font-family: var(--serif); font-size: 26px; font-style: italic; color: var(--muted); letter-spacing: -0.01em; }
+.footer-callout b { color: var(--text); font-style: normal; font-family: var(--sans); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+
+<div class="card-num">06 <span>/</span> 10</div>
+
+<div class="header">
+  <div class="left">
+    <div class="kicker">The Playbook / Scam</div>
+    <div class="num-big">№ 03</div>
+  </div>
+  <div class="right">
+    <h2>The <i>dashboard</i><br>illusion.</h2>
+  </div>
+</div>
+
+<div class="body">
+  <div class="dash fake">
+    <div class="dhead"><div class="t">· Your "lead provider" dashboard</div><div class="stamp">What they show</div></div>
+    <div class="big-num">147</div>
+    <div class="big-label">"Leads matched" this month</div>
+    <div class="chart">
+      <div class="bar" style="height:30%"></div><div class="bar" style="height:55%"></div><div class="bar" style="height:40%"></div><div class="bar" style="height:70%"></div><div class="bar" style="height:60%"></div><div class="bar" style="height:85%"></div><div class="bar" style="height:75%"></div><div class="bar" style="height:95%"></div><div class="bar" style="height:80%"></div><div class="bar" style="height:100%"></div><div class="bar" style="height:90%"></div><div class="bar" style="height:88%"></div>
+    </div>
+    <div class="feed">
+      <div class="row"><span class="tag">🔥 NEW</span><span class="detail">Lead matched · 2m ago</span></div>
+      <div class="row"><span class="tag">🔥 NEW</span><span class="detail">Lead matched · 8m ago</span></div>
+      <div class="row"><span class="tag">🔥 NEW</span><span class="detail">Lead matched · 14m ago</span></div>
+      <div class="row"><span class="tag">🔥 NEW</span><span class="detail">Act fast — 3 contractors notified</span></div>
+      <div class="row"><span class="tag">🔥 NEW</span><span class="detail">Lead matched · 26m ago</span></div>
+    </div>
+    <div class="breakdown">
+      <div>Urgency<b>Maxed</b></div>
+      <div>FOMO<b>Weaponized</b></div>
+      <div>Reality<b>Hidden</b></div>
+    </div>
+  </div>
+
+  <div class="dash real">
+    <div class="dhead"><div class="t">· What actually happened</div><div class="stamp">Reality</div></div>
+    <div class="big-num">3</div>
+    <div class="big-label">Jobs booked · from 147 "leads"</div>
+    <div class="chart">
+      <div class="bar" style="height:4%"></div><div class="bar" style="height:2%"></div><div class="bar" style="height:0%"></div><div class="bar" style="height:3%"></div><div class="bar" style="height:0%"></div><div class="bar" style="height:5%"></div><div class="bar" style="height:2%"></div><div class="bar" style="height:0%"></div><div class="bar" style="height:1%"></div><div class="bar" style="height:4%"></div><div class="bar" style="height:0%"></div><div class="bar" style="height:2%"></div>
+    </div>
+    <div class="feed">
+      <div class="row"><span class="tag">NO ANS</span><span class="detail">122 unanswered calls</span></div>
+      <div class="row"><span class="tag">JUNK</span><span class="detail">14 wrong numbers / bots</span></div>
+      <div class="row"><span class="tag">HIRED</span><span class="detail">6 already hired someone</span></div>
+      <div class="row"><span class="tag">BROWSE</span><span class="detail">2 just price shopping</span></div>
+      <div class="row"><span class="tag">JOB</span><span class="detail">3 became actual jobs</span></div>
+    </div>
+    <div class="breakdown">
+      <div>Answer rate<b>17%</b></div>
+      <div>Close rate<b>2%</b></div>
+      <div>True CPL<b>$1,133</b></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-callout">Flashy green numbers aren't revenue. <b>Revenue is revenue.</b></div>
+
+<div class="brand"><span class="dot"></span><span>Rambitious Media</span></div>
+</body>
+</html>
