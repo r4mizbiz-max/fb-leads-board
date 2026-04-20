@@ -1,85 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="_styles.css">
-<style>
-.header { position: absolute; top: 60px; left: 100px; right: 100px; display: flex; align-items: flex-end; justify-content: space-between; z-index: 5; }
-.header h2 { font-family: var(--serif); font-size: 68px; letter-spacing: -0.02em; line-height: 1; }
-.header h2 i { color: var(--accent); }
-.header .meta { text-align: right; font-size: 12px; color: var(--muted); letter-spacing: 1px; line-height: 1.5; }
-.header .meta strong { color: var(--text); font-weight: 600; display: block; font-size: 14px; }
-
-.quotes { position: absolute; top: 210px; left: 60px; right: 60px; bottom: 90px; }
-.q {
-  position: absolute;
-  background: var(--elev);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 22px 26px;
-  max-width: 340px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-}
-.q .text { font-family: var(--serif); font-size: 26px; line-height: 1.2; color: var(--text); letter-spacing: -0.01em; margin-bottom: 14px; }
-.q .attr { font-size: 11px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
-.q .attr::before { content: ''; width: 18px; height: 1px; background: var(--dim); }
-.q .mark { position: absolute; top: -12px; left: 20px; font-family: var(--serif); font-size: 60px; color: var(--accent); line-height: 1; font-style: italic; }
-
-.q1 { top: 0; left: 40px; transform: rotate(-1.5deg); }
-.q2 { top: 20px; right: 30px; transform: rotate(1.8deg); }
-.q3 { top: 200px; left: 250px; transform: rotate(0.5deg); }
-.q4 { top: 180px; right: 180px; transform: rotate(-1deg); max-width: 300px; }
-.q5 { bottom: 20px; left: 90px; transform: rotate(1.2deg); max-width: 320px; }
-.q6 { bottom: 0; right: 60px; transform: rotate(-0.8deg); max-width: 320px; }
-</style>
-</head>
-<body>
-<div class="grid-bg"></div>
-<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-
-<div class="card-num">02 <span>/</span> 10</div>
-
-<div class="header">
-  <h2>Sound <i>familiar?</i></h2>
-  <div class="meta">
-    <strong>The voices in your head</strong>
-    Every contractor after 90 days of buying leads
-  </div>
-</div>
-
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:40px 48px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#EF4444;font-weight:700;margin-bottom:8px}
+h2{font-size:38px;font-weight:800;margin-bottom:8px;line-height:1.2}
+h2 span{color:#EF4444}
+.sub{font-size:16px;color:#9CA3AF;margin-bottom:24px;line-height:1.5}
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1}
+.quote{background:linear-gradient(135deg,#1C1017,#291520);border:1px solid rgba(239,68,68,0.25);border-radius:14px;padding:22px 24px;display:flex;align-items:flex-start;gap:14px;position:relative;overflow:hidden}
+.quote::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#EF4444,#DC2626)}
+.quote .icon{font-size:32px;flex-shrink:0;margin-top:2px}
+.quote .text h3{font-size:17px;font-weight:700;color:#FCA5A5;line-height:1.35;margin-bottom:6px}
+.quote .text p{font-size:13px;color:#9CA3AF;line-height:1.5}
+.quote .attr{margin-top:10px;display:flex;align-items:center;gap:6px;font-size:11px;color:#6B7280;letter-spacing:1px;text-transform:uppercase}
+.quote .attr::before{content:'';width:16px;height:1px;background:#4B5563}
+.bottom{margin-top:18px;text-align:center;font-size:16px;color:#9CA3AF;line-height:1.5}
+.bottom span{color:#EF4444;font-weight:700}
+</style></head><body>
+<div class="tag">Sound Familiar?</div>
+<h2>Every contractor who bought leads has said <span>these exact words.</span></h2>
+<p class="sub">If any of these hit home, you're not crazy — and you're not alone. This is the playbook working exactly as designed.</p>
 <div class="quotes">
-  <div class="q q1">
-    <div class="mark">"</div>
-    <div class="text">He never answered the phone. Not once. Called six times.</div>
-    <div class="attr">Roofer · Tyler, TX</div>
+  <div class="quote">
+    <div class="icon">📵</div>
+    <div class="text">
+      <h3>"He never answered the phone. Not once. Called six times."</h3>
+      <p>You paid for the lead. You texted, called, left voicemails. Radio silence.</p>
+      <div class="attr">Roofer · Tyler, TX</div>
+    </div>
   </div>
-  <div class="q q2">
-    <div class="mark">"</div>
-    <div class="text">Already got five estimates. I'm literally the seventh call today.</div>
-    <div class="attr">Fence builder · Atlanta, GA</div>
+  <div class="quote">
+    <div class="icon">📞</div>
+    <div class="text">
+      <h3>"Already got five estimates. I'm the seventh call today."</h3>
+      <p>The homeowner picks up and tells you they're already overwhelmed. You paid for that conversation.</p>
+      <div class="attr">Fence builder · Atlanta, GA</div>
+    </div>
   </div>
-  <div class="q q3">
-    <div class="mark">"</div>
-    <div class="text">Just pipe dreamers kicking tires. Nobody's buying.</div>
-    <div class="attr">Bath remodeler · Tampa, FL</div>
+  <div class="quote">
+    <div class="icon">🤷</div>
+    <div class="text">
+      <h3>"The guy didn't even remember filling out the form."</h3>
+      <p>Because he didn't. It was weeks ago. Or it was a gift card survey. Or it was auto-generated.</p>
+      <div class="attr">HVAC · Charlotte, NC</div>
+    </div>
   </div>
-  <div class="q q4">
-    <div class="mark">"</div>
-    <div class="text">The guy didn't even remember filling out the form.</div>
-    <div class="attr">HVAC · Charlotte, NC</div>
-  </div>
-  <div class="q q5">
-    <div class="mark">"</div>
-    <div class="text">"Exclusive" lead. Got called by four other contractors.</div>
-    <div class="attr">Deck builder · Denver, CO</div>
-  </div>
-  <div class="q q6">
-    <div class="mark">"</div>
-    <div class="text">Burned $3k in 60 days. Closed zero jobs.</div>
-    <div class="attr">Window installer · Phoenix, AZ</div>
+  <div class="quote">
+    <div class="icon">💸</div>
+    <div class="text">
+      <h3>"Burned $3K in 60 days. Closed zero jobs."</h3>
+      <p>Balance drained, credits used, dispute window missed. Nothing to show for it.</p>
+      <div class="attr">Window installer · Phoenix, AZ</div>
+    </div>
   </div>
 </div>
-
-<div class="brand"><span class="dot"></span><span>Rambitious Media</span></div>
-</body>
-</html>
+<div class="bottom">This isn't bad luck. <span>It's the business model.</span> Let's break down exactly how they do it ↓</div>
+</body></html>

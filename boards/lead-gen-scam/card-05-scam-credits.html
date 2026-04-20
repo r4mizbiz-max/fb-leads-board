@@ -1,89 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="_styles.css">
-<style>
-.header { position: absolute; top: 58px; left: 80px; right: 80px; z-index: 5; display: flex; justify-content: space-between; align-items: flex-end; }
-.header .left .num-big { font-family: var(--serif); font-style: italic; font-size: 80px; line-height: 0.9; color: var(--red); letter-spacing: -0.02em; }
-.header .left .kicker { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-.header .right h2 { font-family: var(--serif); font-size: 64px; line-height: 0.95; letter-spacing: -0.02em; text-align: right; }
-.header .right h2 i { color: var(--red); }
-
-.body { position: absolute; top: 260px; left: 80px; right: 80px; bottom: 150px; display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; }
-
-.left-col { display: flex; flex-direction: column; gap: 18px; }
-.quote-box { padding: 22px; background: var(--elev); border: 1px solid var(--line); border-left: 3px solid var(--red); border-radius: 10px; }
-.quote-box .lbl { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
-.quote-box .txt { font-size: 16px; line-height: 1.45; }
-.quote-box .txt b { color: var(--red); font-weight: 700; }
-
-.math { background: var(--elev); border: 1px solid var(--line); border-radius: 14px; padding: 30px; position: relative; }
-.math .title { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 22px; }
-.math .stream { display: flex; flex-direction: column; gap: 14px; }
-.math .line { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 12px; border-bottom: 1px dashed var(--line); }
-.math .line:last-child { border-bottom: none; padding-bottom: 0; }
-.math .line .lbl { font-size: 14px; color: var(--text); }
-.math .line .val { font-family: var(--serif); font-size: 30px; font-style: italic; letter-spacing: -0.02em; }
-.math .line .val.neg { color: var(--red); }
-.math .line .val.dim { color: var(--muted); }
-.math .line .val.final { color: var(--red); font-size: 44px; }
-.math .final-row { border-top: 1px solid var(--red); padding-top: 18px; margin-top: 6px; }
-.math .stamp { position: absolute; top: 20px; right: 20px; font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--red); border: 1px solid var(--red); padding: 4px 10px; border-radius: 4px; transform: rotate(4deg); letter-spacing: 1px; }
-
-.footer-line { position: absolute; bottom: 70px; left: 80px; right: 80px; font-family: var(--serif); font-size: 26px; font-style: italic; color: var(--muted); letter-spacing: -0.01em; text-align: center; line-height: 1.3; }
-.footer-line b { color: var(--text); font-style: normal; font-family: var(--sans); font-weight: 700; }
-</style>
-</head>
-<body>
-<div class="grid-bg"></div>
-<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-
-<div class="card-num">05 <span>/</span> 10</div>
-
-<div class="header">
-  <div class="left">
-    <div class="kicker">The Playbook / Scam</div>
-    <div class="num-big">№ 02</div>
-  </div>
-  <div class="right">
-    <h2>The <i>credit</i><br>drain.</h2>
-  </div>
-</div>
-
-<div class="body">
-  <div class="left-col">
-    <div class="quote-box">
-      <div class="lbl">How it works</div>
-      <div class="txt">Angi, HomeAdvisor, Thumbtack charge you <b>per "lead credit"</b> — $50 to $120 a pop. They push junk into your queue so your balance drains whether the lead is real or not.</div>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:40px 48px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#EF4444;font-weight:700;margin-bottom:8px}
+h2{font-size:34px;font-weight:800;margin-bottom:6px;line-height:1.2}
+h2 span{color:#EF4444}
+.sub{font-size:17px;color:#9CA3AF;margin-bottom:24px;line-height:1.5}
+.main{display:grid;grid-template-columns:1fr 1fr;gap:24px;flex:1}
+.col{display:flex;flex-direction:column;gap:14px}
+.cost-card{background:#1F2937;border-radius:14px;padding:20px 22px;display:flex;align-items:flex-start;gap:14px}
+.cost-card .icon{font-size:32px;flex-shrink:0}
+.cost-card h3{font-size:17px;font-weight:700;color:#FCA5A5;margin-bottom:6px}
+.cost-card p{font-size:14px;color:#9CA3AF;line-height:1.5}
+.cost-card p b{color:#D1D5DB}
+.math{background:linear-gradient(135deg,#1C1017,#1a0a0a);border:1px solid rgba(239,68,68,0.3);border-radius:14px;padding:24px;display:flex;flex-direction:column;position:relative}
+.math .stamp{position:absolute;top:12px;right:14px;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.4);color:#FCA5A5;font-size:10px;font-weight:700;letter-spacing:1.5px;padding:3px 10px;border-radius:4px;text-transform:uppercase}
+.math h3{font-size:15px;font-weight:700;color:#FCA5A5;margin-bottom:16px;text-transform:uppercase;letter-spacing:1px}
+.math .line{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px dashed rgba(239,68,68,0.15);font-size:14px;color:#D1D5DB}
+.math .line:first-of-type{padding-top:0}
+.math .line b{font-weight:800;color:#fff;font-size:18px}
+.math .line.deduction b{color:#EF4444}
+.math .final{margin-top:14px;padding:16px 0 0;border-top:2px solid #EF4444;display:flex;justify-content:space-between;align-items:baseline}
+.math .final .lbl{font-size:15px;color:#FCA5A5;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.math .final .val{font-size:44px;font-weight:900;color:#EF4444;line-height:1}
+.bottom{margin-top:18px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:16px 24px;font-size:16px;color:#FCA5A5;line-height:1.5;text-align:center}
+.bottom b{color:#fff}
+</style></head><body>
+<div class="tag">The Playbook · Scam #2</div>
+<h2>The <span>credit-system drain</span> — designed to empty your balance</h2>
+<p class="sub">Angi, HomeAdvisor, Thumbtack all run the same model. "Credits" sound flexible. They're not — they're how you lose money without realizing it.</p>
+<div class="main">
+  <div class="col">
+    <div class="cost-card">
+      <div class="icon">💳</div>
+      <div>
+        <h3>$50–$120 charged per lead — whether it's real or not</h3>
+        <p>You don't pay per booked job. You pay per "match." A wrong number? <b>Charged.</b> Already hired someone? <b>Charged.</b> Ghosted? <b>Charged.</b></p>
+      </div>
     </div>
-    <div class="quote-box">
-      <div class="lbl">The dispute trap</div>
-      <div class="txt">Narrow window. Strict reasons. Manual review. Most disputes get denied — "we can verify the lead was delivered." <b>Delivered ≠ real.</b></div>
+    <div class="cost-card">
+      <div class="icon">⏱️</div>
+      <div>
+        <h3>The dispute window is on purpose</h3>
+        <p>Narrow timeframe (usually 48-72 hrs). Strict reasons. Manual review. Most disputes are denied with "we can verify the lead was delivered." <b>Delivered ≠ real.</b></p>
+      </div>
     </div>
-    <div class="quote-box">
-      <div class="lbl">The result</div>
-      <div class="txt">You call 40 "leads." 22 never pick up. 8 are wrong numbers. 5 already hired. 5 are price-shoppers. <b>Zero jobs. $3,000 gone.</b></div>
+    <div class="cost-card">
+      <div class="icon">🔁</div>
+      <div>
+        <h3>Auto-reload keeps the machine running</h3>
+        <p>Balance gets low? Card auto-charges. No notification. No approval needed. <b>You just wake up and $500 is gone again.</b></p>
+      </div>
     </div>
   </div>
-
   <div class="math">
-    <div class="stamp">· real numbers</div>
-    <div class="title">· The drain · 30-day window</div>
-    <div class="stream">
-      <div class="line"><span class="lbl">Monthly budget</span><span class="val">$3,000</span></div>
-      <div class="line"><span class="lbl">@ $75 per credit</span><span class="val dim">= 40 leads</span></div>
-      <div class="line"><span class="lbl">Never answered</span><span class="val neg">− 22</span></div>
-      <div class="line"><span class="lbl">Wrong number / junk</span><span class="val neg">− 8</span></div>
-      <div class="line"><span class="lbl">Already hired someone</span><span class="val neg">− 5</span></div>
-      <div class="line"><span class="lbl">Price shoppers only</span><span class="val neg">− 4</span></div>
-      <div class="line final-row"><span class="lbl">Real conversations</span><span class="val final">1</span></div>
+    <div class="stamp">Real Math</div>
+    <h3>📉 Your $3,000 month</h3>
+    <div class="line"><span>Monthly budget</span><b>$3,000</b></div>
+    <div class="line"><span>@ $75 per credit</span><b>= 40 leads</b></div>
+    <div class="line deduction"><span>Never answered the phone</span><b>−22</b></div>
+    <div class="line deduction"><span>Wrong numbers / bots / junk</span><b>−8</b></div>
+    <div class="line deduction"><span>Already hired someone else</span><b>−5</b></div>
+    <div class="line deduction"><span>Just price shopping</span><b>−4</b></div>
+    <div class="final">
+      <div class="lbl">Real conversations</div>
+      <div class="val">1</div>
     </div>
   </div>
 </div>
-
-<div class="footer-line">$3,000 spent. <b>One</b> real conversation. That's a <b>$3,000 CPL</b> — before you've quoted a single job.</div>
-
-<div class="brand"><span class="dot"></span><span>Rambitious Media</span></div>
-</body>
-</html>
+<div class="bottom">⚠️ That's a <b>$3,000 cost per real conversation</b> — before you've even quoted a single job.</div>
+</body></html>

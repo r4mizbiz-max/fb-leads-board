@@ -1,67 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="_styles.css">
-<style>
-.header { position: absolute; top: 60px; left: 100px; right: 100px; z-index: 5; }
-.header .tag { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
-.header h2 { font-family: var(--serif); font-size: 60px; line-height: 1; letter-spacing: -0.02em; }
-.header h2 i { color: var(--muted); }
-
-.split { position: absolute; top: 230px; left: 60px; right: 60px; bottom: 140px; display: grid; grid-template-columns: 1fr 1px 1fr; gap: 50px; }
-
-.side { position: relative; padding: 20px 30px; display: flex; flex-direction: column; justify-content: center; }
-.side .label { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 22px; }
-.side.bad .label { color: var(--red); }
-.side.good .label { color: var(--green); }
-.side .term { font-family: var(--serif); font-size: 76px; line-height: 0.9; letter-spacing: -0.025em; margin-bottom: 18px; }
-.side.bad .term { color: var(--red); }
-.side.good .term { color: var(--green); }
-.side .term i { font-style: italic; }
-.side .def { font-size: 20px; line-height: 1.4; color: var(--text); max-width: 420px; font-weight: 400; }
-.side .example { margin-top: 24px; padding: 14px 18px; background: var(--elev); border: 1px solid var(--line); border-radius: 10px; font-size: 13px; color: var(--muted); font-family: ui-monospace, Menlo, monospace; }
-.side.bad .example { border-color: rgba(239,68,68,0.25); }
-.side.good .example { border-color: rgba(16,185,129,0.25); }
-
-.divider { background: var(--line); position: relative; }
-.divider::before { content: 'vs'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: var(--serif); font-style: italic; font-size: 24px; color: var(--dim); background: var(--bg); padding: 8px; }
-
-.footer { position: absolute; bottom: 70px; left: 0; right: 0; text-align: center; font-family: var(--serif); font-style: italic; font-size: 28px; color: var(--muted); letter-spacing: -0.01em; }
-.footer b { color: var(--text); font-weight: 400; font-style: normal; font-family: var(--sans); font-weight: 700; }
-</style>
-</head>
-<body>
-<div class="grid-bg"></div>
-<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-
-<div class="card-num">03 <span>/</span> 10</div>
-
-<div class="header">
-  <div class="tag">// The reframe</div>
-  <h2>Nobody wants leads.<br><i>They want appointments.</i></h2>
-</div>
-
-<div class="split">
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:40px 48px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#EAB308;font-weight:700;margin-bottom:8px}
+h2{font-size:34px;font-weight:800;margin-bottom:6px;line-height:1.2}
+h2 span{color:#10B981}
+h2 em{color:#EF4444;font-style:normal}
+.sub{font-size:17px;color:#9CA3AF;margin-bottom:28px;line-height:1.5}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:24px;flex:1}
+.side{border-radius:14px;padding:28px;display:flex;flex-direction:column}
+.side.bad{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2)}
+.side.good{background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2)}
+.side .label{font-size:11px;text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:8px}
+.side.bad .label{color:#EF4444}
+.side.good .label{color:#10B981}
+.side h3{font-size:44px;font-weight:900;line-height:1;margin-bottom:14px;letter-spacing:-1px}
+.side.bad h3{color:#EF4444}
+.side.good h3{color:#10B981}
+.side .def{font-size:16px;color:#D1D5DB;line-height:1.5;margin-bottom:18px}
+.side .def b{color:#fff}
+.side .example{background:rgba(0,0,0,0.35);border-radius:10px;padding:16px;font-family:ui-monospace,Menlo,monospace;font-size:13px;line-height:1.8;color:#9CA3AF;flex:1}
+.side .example .line{display:flex;gap:8px;align-items:baseline}
+.side.bad .example .bullet{color:#EF4444;font-weight:700}
+.side.good .example .bullet{color:#10B981;font-weight:700}
+.bottom-rule{margin-top:22px;background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.2);border-radius:12px;padding:18px 24px;font-size:16px;color:#FDE68A;line-height:1.5;text-align:center}
+.bottom-rule b{color:#fff}
+</style></head><body>
+<div class="tag">The Reframe</div>
+<h2>Nobody wants <em>leads.</em> They want <span>appointments.</span></h2>
+<p class="sub">Lead gen companies sold you the wrong product. Here's the difference — and why it matters:</p>
+<div class="compare">
   <div class="side bad">
-    <div class="label">· What you're buying</div>
-    <div class="term">A <i>lead.</i></div>
-    <div class="def">A phone number attached to someone who may or may not remember filling out a form.</div>
-    <div class="example">→ call · no answer · voicemail · text · silence · retry · dead</div>
+    <div class="label">❌ What they're selling you</div>
+    <h3>A Lead.</h3>
+    <div class="def">A phone number attached to someone who may or may not <b>remember filling out the form</b>. Might answer. Probably won't.</div>
+    <div class="example">
+      <div class="line"><span class="bullet">→</span> Call #1 · no answer</div>
+      <div class="line"><span class="bullet">→</span> Text follow-up · ignored</div>
+      <div class="line"><span class="bullet">→</span> Call #2 · voicemail</div>
+      <div class="line"><span class="bullet">→</span> Call #3 · "Wrong number"</div>
+      <div class="line"><span class="bullet">→</span> Call #4 · "Already hired someone"</div>
+      <div class="line"><span class="bullet">→</span> Dead. $75 gone.</div>
+    </div>
   </div>
-
-  <div class="divider"></div>
-
   <div class="side good">
-    <div class="label">· What you actually want</div>
-    <div class="term">An <i>appointment.</i></div>
-    <div class="def">Someone sitting at their kitchen table at 4pm Thursday — waiting for you to show up.</div>
-    <div class="example">→ calendar invite · confirmed · address · ready to sign</div>
+    <div class="label">✅ What you actually want</div>
+    <h3>An Appointment.</h3>
+    <div class="def">Someone <b>sitting at their kitchen table at 4pm Thursday</b> waiting for you to show up. Pre-qualified. Confirmed. Ready to talk.</div>
+    <div class="example">
+      <div class="line"><span class="bullet">✓</span> Calendar invite · confirmed</div>
+      <div class="line"><span class="bullet">✓</span> Address in the notes</div>
+      <div class="line"><span class="bullet">✓</span> Pre-qualified · homeowner</div>
+      <div class="line"><span class="bullet">✓</span> Budget matched · ready to sign</div>
+      <div class="line"><span class="bullet">✓</span> Exclusive · nobody else pitching</div>
+      <div class="line"><span class="bullet">✓</span> You close. Check cashed.</div>
+    </div>
   </div>
 </div>
-
-<div class="footer">One makes you <i>chase</i>. The other makes you <b>close</b>.</div>
-
-<div class="brand"><span class="dot"></span><span>Rambitious Media</span></div>
-</body>
-</html>
+<div class="bottom-rule">💡 One makes you <b>chase</b>. The other makes you <b>close</b>. Guess which one lead gen companies want you buying.</div>
+</body></html>

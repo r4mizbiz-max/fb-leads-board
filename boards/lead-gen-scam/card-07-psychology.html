@@ -1,79 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="_styles.css">
-<style>
-.header { position: absolute; top: 60px; left: 80px; right: 80px; z-index: 5; }
-.header .kicker { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
-.header h2 { font-family: var(--serif); font-size: 58px; line-height: 1; letter-spacing: -0.02em; }
-.header h2 i { color: var(--muted); font-style: italic; }
-
-.grid { position: absolute; top: 220px; left: 80px; right: 80px; bottom: 130px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 22px; }
-
-.tile { background: var(--elev); border: 1px solid var(--line); border-radius: 14px; padding: 28px; position: relative; overflow: hidden; }
-.tile .n { font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--accent); line-height: 1; letter-spacing: -0.02em; margin-bottom: 10px; }
-.tile h3 { font-family: var(--serif); font-size: 36px; line-height: 1; letter-spacing: -0.02em; margin-bottom: 14px; }
-.tile h3 i { color: var(--accent); }
-.tile p { font-size: 15px; line-height: 1.5; color: var(--muted); max-width: 420px; }
-.tile p b { color: var(--text); font-weight: 600; }
-.tile .voice { position: absolute; bottom: 22px; right: 22px; left: 22px; font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--dim); padding-top: 14px; border-top: 1px dashed var(--line); }
-.tile .voice::before { content: '"'; color: var(--accent); }
-.tile .voice::after { content: '"'; color: var(--accent); }
-
-.accent-dot { position: absolute; top: 22px; right: 22px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
-
-.footer-line { position: absolute; bottom: 65px; left: 80px; right: 80px; text-align: center; font-family: var(--serif); font-size: 22px; font-style: italic; color: var(--muted); letter-spacing: -0.01em; }
-.footer-line b { color: var(--text); font-style: normal; font-family: var(--sans); font-weight: 700; }
-</style>
-</head>
-<body>
-<div class="grid-bg"></div>
-<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-
-<div class="card-num">07 <span>/</span> 10</div>
-
-<div class="header">
-  <div class="kicker">// Why it keeps working on us</div>
-  <h2>Smart contractors keep paying. <i>Here's why.</i></h2>
-</div>
-
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:40px 48px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#EAB308;font-weight:700;margin-bottom:8px}
+h2{font-size:36px;font-weight:800;margin-bottom:6px;line-height:1.2}
+h2 span{color:#EAB308}
+.sub{font-size:16px;color:#9CA3AF;margin-bottom:22px;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1}
+.tile{background:#1F2937;border-radius:14px;padding:22px 24px;display:flex;flex-direction:column;position:relative;overflow:hidden;border-top:3px solid}
+.tile.t1{border-top-color:#EF4444}
+.tile.t2{border-top-color:#3B82F6}
+.tile.t3{border-top-color:#A855F7}
+.tile.t4{border-top-color:#EAB308}
+.tile .head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.tile .icon{font-size:30px}
+.tile h3{font-size:18px;font-weight:800;color:#F9FAFB;line-height:1.3}
+.tile p{font-size:14px;color:#9CA3AF;line-height:1.5;margin-bottom:12px;flex:1}
+.tile p b{color:#D1D5DB}
+.voice{background:rgba(0,0,0,0.3);border-left:3px solid;padding:10px 14px;font-size:13px;color:#9CA3AF;font-style:italic;line-height:1.4;border-radius:0 8px 8px 0}
+.tile.t1 .voice{border-left-color:#EF4444}
+.tile.t2 .voice{border-left-color:#3B82F6}
+.tile.t3 .voice{border-left-color:#A855F7}
+.tile.t4 .voice{border-left-color:#EAB308}
+.voice::before{content:'"';color:#6B7280;font-weight:700;margin-right:2px}
+.voice::after{content:'"';color:#6B7280;font-weight:700;margin-left:2px}
+.bottom{margin-top:18px;background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.2);border-radius:12px;padding:16px 24px;font-size:16px;color:#FDE68A;line-height:1.5;text-align:center}
+.bottom b{color:#fff}
+</style></head><body>
+<div class="tag">The Hook</div>
+<h2>Why <span>smart contractors</span> keep paying anyway</h2>
+<p class="sub">You're not dumb for falling for it. The system is engineered to feel like progress. Here's the four levers they pull:</p>
 <div class="grid">
-  <div class="tile">
-    <div class="accent-dot"></div>
-    <div class="n">i.</div>
-    <h3><i>Sunk cost.</i></h3>
-    <p>You've already spent <b>$4,200</b>. Stopping now means admitting the money was wasted. So you keep feeding it — hoping the next lead will be "the one."</p>
+  <div class="tile t1">
+    <div class="head">
+      <div class="icon">🕳️</div>
+      <h3>Sunk cost traps you</h3>
+    </div>
+    <p>You've already dropped <b>$4,200</b>. Quitting now means admitting the money was wasted. So you keep feeding the machine — hoping the next lead is "the one."</p>
     <div class="voice">I've got too much in to quit now.</div>
   </div>
-
-  <div class="tile">
-    <div class="accent-dot"></div>
-    <div class="n">ii.</div>
-    <h3><i>Shiny dashboards.</i></h3>
-    <p>Rising line graphs. Green status badges. "3 new matches!" notifications every hour. Your brain reads it as <b>progress</b>. It's motion, not traction.</p>
-    <div class="voice">It's working — look at all the activity!</div>
+  <div class="tile t2">
+    <div class="head">
+      <div class="icon">📊</div>
+      <h3>Shiny dashboards fake progress</h3>
+    </div>
+    <p>Rising line graphs. Green status pills. "3 new matches!" notifications. Your brain reads it as <b>momentum</b>. It's motion, not traction. Zero of it is revenue.</p>
+    <div class="voice">Look at all this activity — it's working!</div>
   </div>
-
-  <div class="tile">
-    <div class="accent-dot"></div>
-    <div class="n">iii.</div>
-    <h3><i>Manufactured urgency.</i></h3>
-    <p>"3 contractors notified. Claim now." Same psychology as slot machines. Keeps you on the app, keeps you clicking, keeps the <b>credits draining</b>.</p>
-    <div class="voice">Let me grab this one before someone else does.</div>
+  <div class="tile t3">
+    <div class="head">
+      <div class="icon">⚡</div>
+      <h3>Urgency hijacks your clicks</h3>
+    </div>
+    <p>"3 contractors notified. Claim now." Same psychology as slot machines and dating apps — designed to keep you tapping so <b>credits keep draining</b>.</p>
+    <div class="voice">Let me grab this before someone else does.</div>
   </div>
-
-  <div class="tile">
-    <div class="accent-dot"></div>
-    <div class="n">iv.</div>
-    <h3><i>Isolation.</i></h3>
-    <p>Nobody told you a better model exists. Every agency that called you sold the same promise — "we'll get you leads." So you assume <b>this is just the game</b>.</p>
-    <div class="voice">Guess this is just how it works now.</div>
+  <div class="tile t4">
+    <div class="head">
+      <div class="icon">🔕</div>
+      <h3>Isolation kills alternatives</h3>
+    </div>
+    <p>Nobody told you another model exists. Every agency that called sold the same promise — "we'll get you leads." So you figured <b>this is just how the game works</b>.</p>
+    <div class="voice">Guess this is just what you do now.</div>
   </div>
 </div>
-
-<div class="footer-line">It's not you. <b>The system is designed to feel like it's working.</b></div>
-
-<div class="brand"><span class="dot"></span><span>Rambitious Media</span></div>
-</body>
-</html>
+<div class="bottom">💡 It's not you. <b>The system was built to feel like it's working.</b> That's the whole design.</div>
+</body></html>

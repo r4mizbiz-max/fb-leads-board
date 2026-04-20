@@ -1,112 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="_styles.css">
-<style>
-.header { position: absolute; top: 58px; left: 80px; right: 80px; z-index: 5; display: flex; justify-content: space-between; align-items: flex-end; }
-.header .left .num-big { font-family: var(--serif); font-style: italic; font-size: 80px; line-height: 0.9; color: var(--red); letter-spacing: -0.02em; }
-.header .left .kicker { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-.header .right h2 { font-family: var(--serif); font-size: 64px; line-height: 0.95; letter-spacing: -0.02em; text-align: right; }
-.header .right h2 i { color: var(--red); }
-
-.body { position: absolute; top: 240px; left: 80px; right: 80px; bottom: 140px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-
-.dash { background: var(--elev); border: 1px solid var(--line); border-radius: 14px; padding: 22px; position: relative; overflow: hidden; }
-.dash .dhead { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-.dash .dhead .t { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
-.dash .dhead .stamp { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 9px; border-radius: 4px; }
-.dash.fake .dhead .stamp { background: var(--red-dim); color: var(--red); border: 1px solid rgba(239,68,68,0.3); }
-.dash.real .dhead .stamp { background: var(--green-dim); color: var(--green); border: 1px solid rgba(16,185,129,0.3); }
-
-.big-num { font-family: var(--sans); font-size: 72px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
-.dash.fake .big-num { color: var(--red); }
-.dash.real .big-num { color: var(--green); }
-.big-label { font-size: 11px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; }
-
-.chart { height: 60px; display: flex; align-items: flex-end; gap: 3px; margin-bottom: 18px; border-bottom: 1px dashed var(--line); padding-bottom: 8px; }
-.chart .bar { flex: 1; border-radius: 2px 2px 0 0; }
-.dash.fake .chart .bar { background: var(--red); }
-.dash.real .chart .bar { background: var(--green); }
-
-.feed { font-family: ui-monospace, Menlo, monospace; font-size: 11px; line-height: 1.7; color: var(--muted); }
-.feed .row { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.04); }
-.feed .row .tag { font-weight: 700; letter-spacing: 1px; }
-.dash.fake .feed .tag { color: var(--red); }
-.dash.real .feed .tag { color: var(--green); }
-.feed .row .detail { color: var(--dim); }
-
-.breakdown { position: absolute; bottom: 18px; left: 22px; right: 22px; display: flex; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--line); font-size: 10px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
-.breakdown b { color: var(--text); font-size: 13px; font-weight: 700; display: block; }
-.dash.fake .breakdown b { color: var(--red); }
-.dash.real .breakdown b { color: var(--green); }
-
-.footer-callout { position: absolute; bottom: 70px; left: 80px; right: 80px; text-align: center; font-family: var(--serif); font-size: 26px; font-style: italic; color: var(--muted); letter-spacing: -0.01em; }
-.footer-callout b { color: var(--text); font-style: normal; font-family: var(--sans); font-weight: 700; }
-</style>
-</head>
-<body>
-<div class="grid-bg"></div>
-<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-
-<div class="card-num">06 <span>/</span> 10</div>
-
-<div class="header">
-  <div class="left">
-    <div class="kicker">The Playbook / Scam</div>
-    <div class="num-big">№ 03</div>
-  </div>
-  <div class="right">
-    <h2>The <i>dashboard</i><br>illusion.</h2>
-  </div>
-</div>
-
-<div class="body">
-  <div class="dash fake">
-    <div class="dhead"><div class="t">· Your "lead provider" dashboard</div><div class="stamp">What they show</div></div>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:40px 48px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#EF4444;font-weight:700;margin-bottom:8px}
+h2{font-size:34px;font-weight:800;margin-bottom:6px;line-height:1.2}
+h2 span{color:#EF4444}
+.sub{font-size:17px;color:#9CA3AF;margin-bottom:24px;line-height:1.5}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1}
+.panel{border-radius:14px;padding:22px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.panel.fake{background:linear-gradient(135deg,#1C1017,#1a0a0a);border:1px solid rgba(239,68,68,0.3)}
+.panel.real{background:#1F2937;border:1px solid rgba(107,114,128,0.3)}
+.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.panel-head .title{font-size:13px;font-weight:700;color:#9CA3AF;letter-spacing:1px;text-transform:uppercase}
+.panel-head .stamp{font-size:10px;font-weight:800;padding:3px 10px;border-radius:4px;letter-spacing:1px;text-transform:uppercase}
+.panel.fake .stamp{background:rgba(239,68,68,0.2);color:#FCA5A5;border:1px solid rgba(239,68,68,0.4)}
+.panel.real .stamp{background:rgba(107,114,128,0.2);color:#D1D5DB;border:1px solid rgba(107,114,128,0.4)}
+.big-num{font-size:60px;font-weight:900;line-height:1;letter-spacing:-2px;margin-bottom:4px}
+.panel.fake .big-num{color:#EF4444}
+.panel.real .big-num{color:#6B7280}
+.big-lbl{font-size:12px;color:#9CA3AF;margin-bottom:14px;text-transform:uppercase;letter-spacing:1.5px}
+.chart{display:flex;align-items:flex-end;gap:3px;height:50px;margin-bottom:14px}
+.chart .bar{flex:1;border-radius:2px 2px 0 0}
+.panel.fake .chart .bar{background:#EF4444;opacity:0.85}
+.panel.real .chart .bar{background:#374151}
+.feed{background:rgba(0,0,0,0.3);border-radius:10px;padding:14px;flex:1;display:flex;flex-direction:column;gap:7px}
+.feed .row{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#9CA3AF;padding-bottom:7px;border-bottom:1px dashed rgba(255,255,255,0.05);line-height:1.3}
+.feed .row:last-child{border-bottom:none;padding-bottom:0}
+.feed .row .lbl{font-weight:700;letter-spacing:0.5px;font-size:10px;text-transform:uppercase;padding:2px 8px;border-radius:4px}
+.panel.fake .feed .row .lbl{background:rgba(239,68,68,0.15);color:#FCA5A5}
+.panel.real .feed .row .lbl{background:rgba(107,114,128,0.15);color:#9CA3AF}
+.panel.real .feed .row .lbl.ok{background:rgba(16,185,129,0.15);color:#10B981}
+.feed .row .val{color:#D1D5DB;font-size:12px}
+.strip{margin-top:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08)}
+.strip .chip{text-align:center}
+.strip .chip .v{font-size:15px;font-weight:800}
+.strip .chip .k{font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px}
+.panel.fake .chip .v{color:#EF4444}
+.panel.real .chip .v{color:#D1D5DB}
+.bottom{margin-top:18px;background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.2);border-radius:12px;padding:16px 24px;font-size:16px;color:#FDE68A;line-height:1.5;text-align:center}
+.bottom b{color:#fff}
+</style></head><body>
+<div class="tag">The Playbook · Scam #3</div>
+<h2>The <span>dashboard illusion</span> — flashy numbers, empty calendar</h2>
+<p class="sub">Their dashboard is designed to feel like you're winning. Pretty charts. Green badges. "New match!" alerts every 20 minutes. Here's what's actually happening:</p>
+<div class="compare">
+  <div class="panel fake">
+    <div class="panel-head">
+      <div class="title">📊 What they show you</div>
+      <div class="stamp">Illusion</div>
+    </div>
     <div class="big-num">147</div>
-    <div class="big-label">"Leads matched" this month</div>
+    <div class="big-lbl">Leads matched this month</div>
     <div class="chart">
       <div class="bar" style="height:30%"></div><div class="bar" style="height:55%"></div><div class="bar" style="height:40%"></div><div class="bar" style="height:70%"></div><div class="bar" style="height:60%"></div><div class="bar" style="height:85%"></div><div class="bar" style="height:75%"></div><div class="bar" style="height:95%"></div><div class="bar" style="height:80%"></div><div class="bar" style="height:100%"></div><div class="bar" style="height:90%"></div><div class="bar" style="height:88%"></div>
     </div>
     <div class="feed">
-      <div class="row"><span class="tag">🔥 NEW</span><span class="detail">Lead matched · 2m ago</span></div>
-      <div class="row"><span class="tag">🔥 NEW</span><span class="detail">Lead matched · 8m ago</span></div>
-      <div class="row"><span class="tag">🔥 NEW</span><span class="detail">Lead matched · 14m ago</span></div>
-      <div class="row"><span class="tag">🔥 NEW</span><span class="detail">Act fast — 3 contractors notified</span></div>
-      <div class="row"><span class="tag">🔥 NEW</span><span class="detail">Lead matched · 26m ago</span></div>
+      <div class="row"><span class="lbl">🔥 New</span><span class="val">Lead matched · 2m ago</span></div>
+      <div class="row"><span class="lbl">🔥 New</span><span class="val">Lead matched · 8m ago</span></div>
+      <div class="row"><span class="lbl">⚡ Act fast</span><span class="val">3 contractors notified</span></div>
+      <div class="row"><span class="lbl">🔥 New</span><span class="val">Lead matched · 26m ago</span></div>
     </div>
-    <div class="breakdown">
-      <div>Urgency<b>Maxed</b></div>
-      <div>FOMO<b>Weaponized</b></div>
-      <div>Reality<b>Hidden</b></div>
+    <div class="strip">
+      <div class="chip"><div class="v">Urgency</div><div class="k">Maxed</div></div>
+      <div class="chip"><div class="v">FOMO</div><div class="k">Weaponized</div></div>
+      <div class="chip"><div class="v">Reality</div><div class="k">Hidden</div></div>
     </div>
   </div>
-
-  <div class="dash real">
-    <div class="dhead"><div class="t">· What actually happened</div><div class="stamp">Reality</div></div>
+  <div class="panel real">
+    <div class="panel-head">
+      <div class="title">📉 What actually happened</div>
+      <div class="stamp">Reality</div>
+    </div>
     <div class="big-num">3</div>
-    <div class="big-label">Jobs booked · from 147 "leads"</div>
+    <div class="big-lbl">Jobs booked · from those 147 "leads"</div>
     <div class="chart">
       <div class="bar" style="height:4%"></div><div class="bar" style="height:2%"></div><div class="bar" style="height:0%"></div><div class="bar" style="height:3%"></div><div class="bar" style="height:0%"></div><div class="bar" style="height:5%"></div><div class="bar" style="height:2%"></div><div class="bar" style="height:0%"></div><div class="bar" style="height:1%"></div><div class="bar" style="height:4%"></div><div class="bar" style="height:0%"></div><div class="bar" style="height:2%"></div>
     </div>
     <div class="feed">
-      <div class="row"><span class="tag">NO ANS</span><span class="detail">122 unanswered calls</span></div>
-      <div class="row"><span class="tag">JUNK</span><span class="detail">14 wrong numbers / bots</span></div>
-      <div class="row"><span class="tag">HIRED</span><span class="detail">6 already hired someone</span></div>
-      <div class="row"><span class="tag">BROWSE</span><span class="detail">2 just price shopping</span></div>
-      <div class="row"><span class="tag">JOB</span><span class="detail">3 became actual jobs</span></div>
+      <div class="row"><span class="lbl">No ans</span><span class="val">122 unanswered calls</span></div>
+      <div class="row"><span class="lbl">Junk</span><span class="val">14 wrong numbers / bots</span></div>
+      <div class="row"><span class="lbl">Hired</span><span class="val">6 already hired someone</span></div>
+      <div class="row"><span class="lbl ok">Jobs</span><span class="val">3 became actual revenue</span></div>
     </div>
-    <div class="breakdown">
-      <div>Answer rate<b>17%</b></div>
-      <div>Close rate<b>2%</b></div>
-      <div>True CPL<b>$1,133</b></div>
+    <div class="strip">
+      <div class="chip"><div class="v">17%</div><div class="k">Answer rate</div></div>
+      <div class="chip"><div class="v">2%</div><div class="k">Close rate</div></div>
+      <div class="chip"><div class="v">$1,133</div><div class="k">True CPL</div></div>
     </div>
   </div>
 </div>
-
-<div class="footer-callout">Flashy green numbers aren't revenue. <b>Revenue is revenue.</b></div>
-
-<div class="brand"><span class="dot"></span><span>Rambitious Media</span></div>
-</body>
-</html>
+<div class="bottom">💡 Flashy green numbers are <b>not revenue.</b> Booked jobs are revenue. Measure the calendar — not the dashboard.</div>
+</body></html>

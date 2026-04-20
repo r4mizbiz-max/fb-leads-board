@@ -1,50 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="_styles.css">
-<style>
-.wrap { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 0 120px; }
-.kicker { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; display: flex; align-items: center; gap: 12px; }
-.kicker::before { content: ''; width: 28px; height: 1px; background: var(--accent); }
-.quote { font-family: var(--serif); font-size: 96px; line-height: 0.95; letter-spacing: -0.025em; margin-bottom: 36px; }
-.quote i { color: var(--accent); font-style: italic; }
-.quote .mark { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 120px; line-height: 0; position: relative; top: 24px; margin-right: 8px; }
-
-.body { font-size: 22px; line-height: 1.55; color: var(--muted); max-width: 800px; margin-bottom: 50px; font-weight: 300; letter-spacing: -0.01em; }
-.body b { color: var(--text); font-weight: 600; }
-
-.attr { display: flex; align-items: center; gap: 18px; padding-top: 26px; border-top: 1px solid var(--line); max-width: 600px; }
-.attr .av { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #c44820); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-style: italic; font-size: 26px; color: #000; font-weight: 700; }
-.attr .meta .name { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
-.attr .meta .role { font-size: 13px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; font-weight: 500; }
-
-.glow { position: absolute; top: -200px; right: -150px; width: 700px; height: 700px; background: radial-gradient(circle, rgba(255,107,53,0.08), transparent 60%); pointer-events: none; }
-
-.side-note { position: absolute; bottom: 36px; right: 40px; text-align: right; font-size: 10px; color: var(--dim); letter-spacing: 2px; text-transform: uppercase; line-height: 1.6; }
-</style>
-</head>
-<body>
-<div class="grid-bg"></div>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:48px 56px;display:flex;flex-direction:column;position:relative}
+.glow{position:absolute;top:-150px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(16,185,129,0.10),transparent 60%);pointer-events:none}
+.glow2{position:absolute;bottom:-200px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(16,185,129,0.06),transparent 60%);pointer-events:none}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:3px;color:#10B981;font-weight:700;margin-bottom:20px}
+h2{font-size:62px;font-weight:900;line-height:1.05;letter-spacing:-1.5px;margin-bottom:20px;max-width:900px}
+h2 span{color:#10B981}
+.body-text{font-size:18px;color:#D1D5DB;line-height:1.7;max-width:780px;margin-bottom:30px}
+.body-text b{color:#fff;font-weight:700}
+.promises{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
+.promise{background:#1F2937;border:1px solid rgba(16,185,129,0.2);border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:12px}
+.promise .icon{font-size:22px;flex-shrink:0}
+.promise .text{font-size:14px;color:#D1D5DB;line-height:1.4}
+.promise .text b{color:#10B981}
+.sig{display:flex;align-items:center;gap:16px;padding-top:24px;border-top:1px solid #1F2937;max-width:600px}
+.sig .av{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#10B981,#059669);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#fff}
+.sig .meta .name{font-size:17px;font-weight:800;color:#F9FAFB}
+.sig .meta .role{font-size:13px;color:#9CA3AF;letter-spacing:0.5px;margin-top:2px}
+.brand{position:absolute;bottom:32px;right:40px;display:flex;align-items:center;gap:10px}
+.brand .dot{width:12px;height:12px;background:#10B981;border-radius:50%}
+.brand span{font-size:16px;font-weight:600;color:#6B7280;letter-spacing:1px;text-transform:uppercase}
+</style></head><body>
 <div class="glow"></div>
-<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-
-<div class="card-num">09 <span>/</span> 10</div>
-
-<div class="wrap">
-  <div class="kicker">// The part nobody else says out loud</div>
-  <div class="quote"><span class="mark">"</span>I only win<br>when <i>you win.</i></div>
-  <div class="body">No retainers if the appointments don't show up. No tricks. No churn model. <b>One contractor per area</b> — because scale isn't the goal, your calendar is. I'd rather build a ten-year relationship with twenty contractors than burn three hundred in a year.</div>
-  <div class="attr">
-    <div class="av">R</div>
-    <div class="meta">
-      <div class="name">Ram — Rambitious Media</div>
-      <div class="role">Founder · Operating since 2024</div>
-    </div>
+<div class="glow2"></div>
+<div class="tag">The Part Nobody Else Says Out Loud</div>
+<h2>I only win <span>when you win.</span></h2>
+<p class="body-text">No retainers if the appointments don't show. No lock-in. No churn model. <b>One contractor per area</b> — because scale isn't the goal, your calendar is. I'd rather build a 10-year relationship with 20 contractors than burn through 300 in a year.</p>
+<div class="promises">
+  <div class="promise">
+    <div class="icon">🤝</div>
+    <div class="text"><b>Long-term over churn</b> — I'd rather lose a quarter than a decade.</div>
+  </div>
+  <div class="promise">
+    <div class="icon">📍</div>
+    <div class="text"><b>One contractor per zip</b> — your market is your market.</div>
+  </div>
+  <div class="promise">
+    <div class="icon">🚫</div>
+    <div class="text"><b>No contracts, no tricks</b> — if it isn't working, you leave.</div>
+  </div>
+  <div class="promise">
+    <div class="icon">📞</div>
+    <div class="text"><b>You talk to me directly</b> — not a rep, not an account manager.</div>
   </div>
 </div>
-
-<div class="side-note">Est. 2024<br>Built for<br>contractors</div>
-<div class="brand"><span class="dot"></span><span>Rambitious Media</span></div>
-</body>
-</html>
+<div class="sig">
+  <div class="av">R</div>
+  <div class="meta">
+    <div class="name">Ram Qumseya — Founder, Rambitious Media</div>
+    <div class="role">Built for home service contractors · US-based</div>
+  </div>
+</div>
+<div class="brand"><div class="dot"></div><span>Rambitious Media</span></div>
+</body></html>

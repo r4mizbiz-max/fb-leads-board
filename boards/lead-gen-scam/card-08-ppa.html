@@ -1,114 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="_styles.css">
-<style>
-.wrap { position: absolute; inset: 0; }
-
-.header { position: absolute; top: 60px; left: 80px; right: 80px; display: flex; justify-content: space-between; align-items: flex-end; }
-.header .kicker { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--green); margin-bottom: 14px; }
-.header h2 { font-family: var(--serif); font-size: 66px; line-height: 0.95; letter-spacing: -0.02em; }
-.header h2 i { color: var(--green); }
-.header .tagline { text-align: right; font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--muted); max-width: 340px; line-height: 1.25; }
-
-.body { position: absolute; top: 230px; left: 80px; right: 80px; bottom: 110px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-
-.left { display: flex; flex-direction: column; gap: 14px; }
-.item { display: grid; grid-template-columns: 28px 1fr; gap: 16px; align-items: start; padding: 16px 18px; background: var(--elev); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 10px; }
-.item .check { width: 24px; height: 24px; background: var(--green-dim); color: var(--green); border: 1px solid rgba(16,185,129,0.3); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; margin-top: 2px; }
-.item .txt .t { font-family: var(--sans); font-weight: 700; font-size: 16px; margin-bottom: 4px; letter-spacing: -0.01em; }
-.item .txt .d { font-size: 13px; color: var(--muted); line-height: 1.45; }
-
-.calendar { background: var(--elev); border: 1px solid var(--line); border-radius: 14px; padding: 24px; position: relative; overflow: hidden; }
-.cal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
-.cal-header .m { font-family: var(--serif); font-size: 20px; font-style: italic; letter-spacing: -0.01em; }
-.cal-header .wk { font-size: 11px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
-.slots { display: flex; flex-direction: column; gap: 8px; }
-.slot { display: grid; grid-template-columns: 80px 1fr auto; gap: 14px; align-items: center; padding: 10px 14px; background: #141414; border: 1px solid var(--line); border-radius: 8px; }
-.slot.booked { border-color: rgba(16,185,129,0.35); background: rgba(16,185,129,0.06); }
-.slot .time { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 1px; }
-.slot.booked .time { color: var(--green); }
-.slot .who { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; }
-.slot .who .sub { font-size: 11px; color: var(--muted); font-weight: 400; display: block; margin-top: 1px; }
-.slot .status { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; }
-.slot.booked .status { background: var(--green); color: #000; }
-.cal-footer { margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--line); font-size: 11px; color: var(--muted); display: flex; justify-content: space-between; }
-.cal-footer b { color: var(--green); font-weight: 700; }
-
-.green-glow { position: absolute; bottom: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(16,185,129,0.08), transparent 60%); pointer-events: none; z-index: 1; }
-
-.footer-line { position: absolute; bottom: 50px; left: 80px; right: 80px; text-align: center; font-family: var(--serif); font-size: 24px; font-style: italic; color: var(--muted); letter-spacing: -0.01em; }
-.footer-line b { color: var(--green); font-style: normal; font-family: var(--sans); font-weight: 700; }
-</style>
-</head>
-<body>
-<div class="grid-bg"></div>
-<div class="green-glow"></div>
-<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-
-<div class="card-num" style="color: var(--green);">08 <span style="color: var(--green);">/</span> 10</div>
-
-<div class="header">
-  <div>
-    <div class="kicker">// The honest alternative</div>
-    <h2>Here's what<br><i>actually works.</i></h2>
-  </div>
-  <div class="tagline">Pay-per-appointment.<br>Exclusive. No contracts.</div>
-</div>
-
-<div class="body">
-  <div class="left">
-    <div class="item">
-      <div class="check">✓</div>
-      <div class="txt">
-        <div class="t">Pay only when someone shows up.</div>
-        <div class="d">Not per lead. Not per click. Per confirmed appointment on your calendar.</div>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:36px 44px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#10B981;font-weight:700;margin-bottom:6px}
+h2{font-size:34px;font-weight:800;margin-bottom:6px;line-height:1.2}
+h2 span{color:#10B981}
+.sub{font-size:16px;color:#9CA3AF;margin-bottom:22px;line-height:1.5}
+.main{display:grid;grid-template-columns:1fr 1fr;gap:22px;flex:1}
+.features{display:flex;flex-direction:column;gap:12px}
+.feat{background:linear-gradient(135deg,rgba(16,185,129,0.08),rgba(16,185,129,0.02));border:1px solid rgba(16,185,129,0.25);border-radius:12px;padding:16px 20px;display:flex;align-items:flex-start;gap:14px}
+.feat .icon{width:40px;height:40px;background:linear-gradient(135deg,#10B981,#059669);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.feat h3{font-size:16px;font-weight:700;color:#F9FAFB;margin-bottom:4px;line-height:1.3}
+.feat p{font-size:13px;color:#9CA3AF;line-height:1.45}
+.feat p b{color:#6EE7B7}
+.calendar{background:#1F2937;border:1px solid rgba(16,185,129,0.2);border-radius:14px;padding:20px;display:flex;flex-direction:column}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.cal-head .month{font-size:18px;font-weight:800;color:#F9FAFB}
+.cal-head .badge{font-size:10px;font-weight:700;padding:4px 10px;border-radius:99px;background:rgba(16,185,129,0.15);color:#10B981;letter-spacing:1px;text-transform:uppercase;border:1px solid rgba(16,185,129,0.3)}
+.slots{display:flex;flex-direction:column;gap:8px;flex:1}
+.slot{display:grid;grid-template-columns:76px 1fr auto;gap:12px;align-items:center;padding:10px 14px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2);border-radius:10px}
+.slot .time{font-size:12px;font-weight:700;color:#10B981;letter-spacing:0.5px}
+.slot .who .name{font-size:13px;font-weight:700;color:#F9FAFB;line-height:1.2}
+.slot .who .detail{font-size:11px;color:#6B7280;margin-top:2px}
+.slot .status{background:#10B981;color:#fff;font-size:10px;font-weight:800;letter-spacing:1px;padding:4px 10px;border-radius:4px;text-transform:uppercase}
+.cal-foot{margin-top:12px;padding-top:12px;border-top:1px dashed rgba(16,185,129,0.25);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#9CA3AF}
+.cal-foot b{color:#10B981;font-weight:800;font-size:14px}
+.bottom-strip{margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.mini{background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.2);border-radius:10px;padding:14px 16px;text-align:center}
+.mini .val{font-size:22px;font-weight:900;color:#10B981;line-height:1.1}
+.mini .lbl{font-size:11px;color:#6B7280;margin-top:4px;text-transform:uppercase;letter-spacing:0.5px}
+</style></head><body>
+<div class="tag">The Honest Alternative</div>
+<h2>Pay per <span>appointment</span>. Not per lead. Not per click.</h2>
+<p class="sub">You only pay when someone is confirmed and showing up. Here's what that actually looks like:</p>
+<div class="main">
+  <div class="features">
+    <div class="feat">
+      <div class="icon">📅</div>
+      <div>
+        <h3>Pay only when someone shows up</h3>
+        <p>Not per lead. Not per form. Per <b>confirmed appointment</b> on your calendar with a real homeowner.</p>
       </div>
     </div>
-    <div class="item">
-      <div class="check">✓</div>
-      <div class="txt">
-        <div class="t">One contractor per zip code.</div>
-        <div class="d">Genuinely exclusive. Not "exclusive" like Angi calls it. No one else is pitching your homeowner.</div>
+    <div class="feat">
+      <div class="icon">🔒</div>
+      <div>
+        <h3>One contractor per zip code</h3>
+        <p>Genuinely exclusive — not "exclusive" the way Angi uses the word. <b>Nobody else</b> is pitching your homeowner.</p>
       </div>
     </div>
-    <div class="item">
-      <div class="check">✓</div>
-      <div class="txt">
-        <div class="t">Real appointments. Confirmed.</div>
-        <div class="d">Our team talks to them first. Wrong-fit homeowners never land on your calendar.</div>
+    <div class="feat">
+      <div class="icon">✅</div>
+      <div>
+        <h3>Pre-qualified before booking</h3>
+        <p>Our team talks to them first. Budget. Timeline. Decision-maker. <b>Tire kickers never land on your calendar.</b></p>
       </div>
     </div>
-    <div class="item">
-      <div class="check">✓</div>
-      <div class="txt">
-        <div class="t">Month-to-month. Zero lock-in.</div>
-        <div class="d">If it doesn't work, you leave. No contracts, no credits, no cancellation fees.</div>
+    <div class="feat">
+      <div class="icon">🚪</div>
+      <div>
+        <h3>Month-to-month. Zero lock-in.</h3>
+        <p>No contracts. No credits. No cancellation fees. <b>If it doesn't work, you leave.</b> That's the deal.</p>
       </div>
     </div>
   </div>
-
   <div class="calendar">
-    <div class="cal-header">
-      <div class="m">Thu · Apr 23</div>
-      <div class="wk">This week</div>
+    <div class="cal-head">
+      <div class="month">📆 This Week</div>
+      <div class="badge">12 Confirmed</div>
     </div>
     <div class="slots">
-      <div class="slot booked"><span class="time">9:00 AM</span><span class="who">Martinez family<span class="sub">Kitchen remodel · 1240 Oak Ln</span></span><span class="status">Confirmed</span></div>
-      <div class="slot booked"><span class="time">11:30 AM</span><span class="who">Reyes, Dan<span class="sub">Fence replacement · 55 Elm St</span></span><span class="status">Confirmed</span></div>
-      <div class="slot booked"><span class="time">2:00 PM</span><span class="who">Patel residence<span class="sub">Roof inspection · 890 Hill Rd</span></span><span class="status">Confirmed</span></div>
-      <div class="slot booked"><span class="time">4:30 PM</span><span class="who">Khan, Sara<span class="sub">HVAC estimate · 312 Pine Ave</span></span><span class="status">Confirmed</span></div>
+      <div class="slot">
+        <div class="time">Mon 9:00A</div>
+        <div class="who"><div class="name">Martinez family</div><div class="detail">Kitchen remodel · 1240 Oak Ln</div></div>
+        <div class="status">✓ Confirmed</div>
+      </div>
+      <div class="slot">
+        <div class="time">Mon 11:30A</div>
+        <div class="who"><div class="name">Reyes, Dan</div><div class="detail">Fence replacement · 55 Elm St</div></div>
+        <div class="status">✓ Confirmed</div>
+      </div>
+      <div class="slot">
+        <div class="time">Tue 2:00P</div>
+        <div class="who"><div class="name">Patel residence</div><div class="detail">Roof inspection · 890 Hill Rd</div></div>
+        <div class="status">✓ Confirmed</div>
+      </div>
+      <div class="slot">
+        <div class="time">Wed 4:30P</div>
+        <div class="who"><div class="name">Khan, Sara</div><div class="detail">HVAC estimate · 312 Pine Ave</div></div>
+        <div class="status">✓ Confirmed</div>
+      </div>
+      <div class="slot">
+        <div class="time">Thu 10:15A</div>
+        <div class="who"><div class="name">Johnson, Mark</div><div class="detail">Deck build · 77 Cedar Dr</div></div>
+        <div class="status">✓ Confirmed</div>
+      </div>
     </div>
-    <div class="cal-footer">
-      <span>Appointments this week</span>
-      <span><b>12 booked · 0 no-shows</b></span>
+    <div class="cal-foot">
+      <span>Showed-up rate</span>
+      <b>0 no-shows this month</b>
     </div>
   </div>
 </div>
-
-<div class="footer-line">Same budget. <b>Real calendar.</b> No more chasing ghosts.</div>
-
-<div class="brand"><span class="dot" style="background: var(--green); box-shadow: 0 0 12px var(--green);"></span><span>Rambitious Media</span></div>
-</body>
-</html>
+<div class="bottom-strip">
+  <div class="mini"><div class="val">Per appt</div><div class="lbl">How you pay</div></div>
+  <div class="mini"><div class="val">1</div><div class="lbl">Contractor per zip</div></div>
+  <div class="mini"><div class="val">M2M</div><div class="lbl">No contracts</div></div>
+  <div class="mini"><div class="val">100%</div><div class="lbl">Confirmed shows</div></div>
+</div>
+</body></html>
