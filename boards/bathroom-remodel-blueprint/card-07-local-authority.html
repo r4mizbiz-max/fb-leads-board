@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:40px 48px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#10B981;font-weight:700;margin-bottom:8px}
+h2{font-size:36px;font-weight:800;margin-bottom:6px;line-height:1.2}
+h2 span{color:#10B981}
+.sub{font-size:16px;color:#9CA3AF;margin-bottom:20px;line-height:1.5}
+.main{display:grid;grid-template-columns:1.15fr 1fr;gap:26px;flex:1}
+/* hub */
+.hub{position:relative;background:#0d1320;border:1px solid #1F2937;border-radius:16px;overflow:hidden}
+.hub .ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:1px dashed rgba(16,185,129,0.18);border-radius:50%}
+.hub .ring.r1{width:300px;height:300px}
+.hub .ring.r2{width:200px;height:200px}
+.center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:118px;height:118px;border-radius:50%;background:linear-gradient(135deg,#10B981,#059669);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(16,185,129,0.4);z-index:5}
+.center .y{font-size:26px;font-weight:900;letter-spacing:1px}
+.center .yl{font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.85;margin-top:2px}
+.chip{position:absolute;background:#1F2937;border:1px solid #374151;border-radius:10px;padding:9px 13px;display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:#D1D5DB;z-index:4}
+.chip .ci{font-size:16px}
+.chip.c1{top:10%;left:50%;transform:translateX(-50%)}
+.chip.c2{top:27%;right:6%}
+.chip.c3{bottom:27%;right:6%}
+.chip.c4{bottom:10%;left:50%;transform:translateX(-50%)}
+.chip.c5{bottom:27%;left:6%}
+.chip.c6{top:27%;left:6%}
+/* discovery sequence */
+.seq{display:flex;flex-direction:column}
+.seq h3{font-size:15px;font-weight:700;color:#F9FAFB;margin-bottom:14px}
+.seq h3 b{color:#10B981}
+.steps{display:flex;flex-direction:column;gap:9px;flex:1}
+.srow{display:flex;align-items:center;gap:12px;background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.15);border-radius:10px;padding:11px 14px}
+.srow .n{width:24px;height:24px;border-radius:50%;background:rgba(16,185,129,0.15);color:#10B981;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.srow .t{font-size:13.5px;color:#D1D5DB;line-height:1.35}
+.srow .t b{color:#fff}
+.won{margin-top:12px;background:linear-gradient(135deg,rgba(16,185,129,0.15),rgba(16,185,129,0.04));border:1px solid rgba(16,185,129,0.3);border-radius:10px;padding:13px 16px;text-align:center;font-size:14px;font-weight:700;color:#6EE7B7}
+.bottom{margin-top:20px;background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.2);border-radius:12px;padding:16px 24px;font-size:16px;color:#FDE68A;line-height:1.5;text-align:center}
+.bottom b{color:#fff}
+</style></head><body>
+<div class="tag">Local Authority</div>
+<h2>Someone types "bathroom remodel near me" — and you're <span>everywhere.</span></h2>
+<p class="sub">Every channel points back to the same place: you. By the time they decide, you already feel like the safe choice.</p>
+<div class="main">
+  <div class="hub">
+    <div class="ring r1"></div>
+    <div class="ring r2"></div>
+    <div class="chip c1"><span class="ci">🔎</span>Google</div>
+    <div class="chip c2"><span class="ci">📘</span>Facebook</div>
+    <div class="chip c3"><span class="ci">📸</span>Instagram</div>
+    <div class="chip c4"><span class="ci">▶️</span>YouTube</div>
+    <div class="chip c5"><span class="ci">⭐</span>Reviews</div>
+    <div class="chip c6"><span class="ci">🌐</span>Website</div>
+    <div class="center"><div class="y">YOU</div><div class="yl">the answer</div></div>
+  </div>
+  <div class="seq">
+    <h3>What that homeowner sees in <b>10 minutes</b></h3>
+    <div class="steps">
+      <div class="srow"><div class="n">1</div><div class="t">Searches "near me" — <b>finds you on the map</b></div></div>
+      <div class="srow"><div class="n">2</div><div class="t">Watches <b>three of your videos</b></div></div>
+      <div class="srow"><div class="n">3</div><div class="t">Reads <b>80 five-star reviews</b></div></div>
+      <div class="srow"><div class="n">4</div><div class="t">Lands on a <b>website full of real reveals</b></div></div>
+      <div class="srow"><div class="n">5</div><div class="t">Sees your <b>active, human Facebook</b></div></div>
+    </div>
+    <div class="won">✅ At that point, you've already won.</div>
+  </div>
+</div>
+<div class="bottom">💡 Not because you're cheaper. <b>Because you're familiar.</b> Familiar beats cheap every single time.</div>
+</body></html>

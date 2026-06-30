@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:44px 48px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#EAB308;font-weight:700;margin-bottom:8px}
+h2{font-size:36px;font-weight:800;margin-bottom:6px;line-height:1.2}
+h2 span{color:#10B981}
+h2 em{color:#EF4444;font-style:normal}
+.sub{font-size:17px;color:#9CA3AF;margin-bottom:34px;line-height:1.5}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;flex:1;align-items:stretch}
+.step{position:relative;display:flex;flex-direction:column}
+.node{background:#1F2937;border-radius:14px;padding:22px 18px;flex:1;display:flex;flex-direction:column;border-top:3px solid;margin:0 10px}
+.step.s1 .node{border-top-color:#6B7280}
+.step.s2 .node{border-top-color:#3B82F6}
+.step.s3 .node{border-top-color:#A855F7}
+.step.s4 .node{border-top-color:#EAB308}
+.step.s5 .node{border-top-color:#10B981}
+.node .num{font-size:12px;font-weight:800;letter-spacing:1px;color:#4B5563;margin-bottom:10px}
+.node .icon{font-size:34px;margin-bottom:12px}
+.node h3{font-size:19px;font-weight:800;margin-bottom:10px;color:#F9FAFB}
+.step.s5 .node h3{color:#10B981}
+.node .thought{font-size:13px;color:#9CA3AF;font-style:italic;line-height:1.45}
+.node .thought::before{content:'\201C';color:#4B5563}
+.node .thought::after{content:'\201D';color:#4B5563}
+.arrow{position:absolute;top:50%;right:-12px;transform:translateY(-50%);font-size:24px;color:#374151;z-index:5;font-weight:700}
+.line-marker{position:absolute;bottom:-30px;left:0;right:0;height:24px}
+.phase-bar{display:flex;margin-top:24px;gap:10px}
+.phase{flex:1;text-align:center;font-size:11px;text-transform:uppercase;letter-spacing:1px;font-weight:700;padding:8px;border-radius:8px}
+.phase.market{background:rgba(59,130,246,0.1);color:#93C5FD;flex:4}
+.phase.call{background:rgba(16,185,129,0.12);color:#6EE7B7;flex:1}
+.bottom{margin-top:22px;background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.2);border-radius:12px;padding:16px 24px;font-size:16px;color:#FDE68A;line-height:1.5;text-align:center}
+.bottom b{color:#fff}
+</style></head><body>
+<div class="tag">The Customer Journey</div>
+<h2>Nobody wakes up and spends <em>$30,000</em> on a bathroom.</h2>
+<p class="sub">They walk a path first. By the time they call you, the real selling is already done — or already lost.</p>
+<div class="flow">
+  <div class="step s1">
+    <div class="node">
+      <div class="num">STEP 01</div>
+      <div class="icon">😤</div>
+      <h3>Awareness</h3>
+      <div class="thought">I am so done with this ugly, leaking bathroom.</div>
+      <div class="arrow">→</div>
+    </div>
+  </div>
+  <div class="step s2">
+    <div class="node">
+      <div class="num">STEP 02</div>
+      <div class="icon">🔍</div>
+      <h3>Research</h3>
+      <div class="thought">What does a walk-in shower even cost?</div>
+      <div class="arrow">→</div>
+    </div>
+  </div>
+  <div class="step s3">
+    <div class="node">
+      <div class="num">STEP 03</div>
+      <div class="icon">🤝</div>
+      <h3>Trust</h3>
+      <div class="thought">Who around here actually does good work?</div>
+      <div class="arrow">→</div>
+    </div>
+  </div>
+  <div class="step s4">
+    <div class="node">
+      <div class="num">STEP 04</div>
+      <div class="icon">📋</div>
+      <h3>Estimate</h3>
+      <div class="thought">Okay, I'll have a couple of them out to quote.</div>
+      <div class="arrow">→</div>
+    </div>
+  </div>
+  <div class="step s5">
+    <div class="node">
+      <div class="num">STEP 05</div>
+      <div class="icon">✅</div>
+      <h3>Sale</h3>
+      <div class="thought">Let's do it. When can you start?</div>
+    </div>
+  </div>
+</div>
+<div class="phase-bar">
+  <div class="phase market">⬅ Marketing happens here — before the phone ever rings</div>
+  <div class="phase call">📞 The call</div>
+</div>
+<div class="bottom">💡 Steps 1 through 4 happen on Google, Facebook and YouTube — <b>not on the phone.</b> Win those, and the call is just paperwork.</div>
+</body></html>

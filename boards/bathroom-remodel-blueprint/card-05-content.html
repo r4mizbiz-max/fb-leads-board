@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:40px 48px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#EAB308;font-weight:700;margin-bottom:8px}
+h2{font-size:36px;font-weight:800;margin-bottom:6px;line-height:1.2}
+h2 span{color:#10B981}
+.sub{font-size:16px;color:#9CA3AF;margin-bottom:22px;line-height:1.5}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;flex:1}
+.tile{background:#1F2937;border-radius:13px;padding:18px 18px;display:flex;flex-direction:column;border-top:3px solid #10B981}
+.tile .icon{font-size:28px;margin-bottom:10px}
+.tile h3{font-size:16px;font-weight:800;color:#F9FAFB;line-height:1.25;margin-bottom:8px}
+.tile .q{font-size:12.5px;color:#9CA3AF;font-style:italic;line-height:1.4;flex:1}
+.tile .q::before{content:'\201C';color:#6B7280}
+.tile .q::after{content:'\201D';color:#6B7280}
+.tile.wide{grid-column:span 4;flex-direction:row;align-items:center;gap:18px;border-top:0;border-left:3px solid #EAB308;background:rgba(234,179,8,0.06)}
+.tile.wide .icon{margin-bottom:0;font-size:30px}
+.tile.wide h3{margin-bottom:2px;color:#FDE68A}
+.tile.wide .q{font-style:normal;color:#D1D5DB;font-size:14px}
+.tile.wide .q::before,.tile.wide .q::after{content:''}
+.bottom{margin-top:20px;background:rgba(16,185,129,0.07);border:1px solid rgba(16,185,129,0.2);border-radius:12px;padding:16px 24px;font-size:16px;color:#6EE7B7;line-height:1.5;text-align:center}
+.bottom b{color:#fff}
+</style></head><body>
+<div class="tag">What Homeowners Actually Want</div>
+<h2>Every question a homeowner has is a piece of <span>content.</span></h2>
+<p class="sub">Stop posting one before-and-after every two weeks. They don't want photos — they want <i>answers.</i> Each one is a video.</p>
+<div class="grid">
+  <div class="tile">
+    <div class="icon">🪄</div>
+    <h3>Before &amp; After</h3>
+    <div class="q">Can this old bathroom really look like that?</div>
+  </div>
+  <div class="tile">
+    <div class="icon">❓</div>
+    <h3>FAQ</h3>
+    <div class="q">How long does a remodel actually take?</div>
+  </div>
+  <div class="tile">
+    <div class="icon">⚠️</div>
+    <h3>Mistakes</h3>
+    <div class="q">What goes wrong if you hire the cheap guy?</div>
+  </div>
+  <div class="tile">
+    <div class="icon">🎥</div>
+    <h3>Walkthroughs</h3>
+    <div class="q">Show me a finished job, room by room.</div>
+  </div>
+  <div class="tile">
+    <div class="icon">🔨</div>
+    <h3>Behind the Scenes</h3>
+    <div class="q">What does demo &amp; install really look like?</div>
+  </div>
+  <div class="tile">
+    <div class="icon">🧱</div>
+    <h3>Material Choices</h3>
+    <div class="q">Quartz vs. cultured marble — what's better?</div>
+  </div>
+  <div class="tile">
+    <div class="icon">💬</div>
+    <h3>Client Stories</h3>
+    <div class="q">Would a real neighbor recommend them?</div>
+  </div>
+  <div class="tile">
+    <div class="icon">💳</div>
+    <h3>Financing</h3>
+    <div class="q">Can I actually afford this — monthly?</div>
+  </div>
+  <div class="tile wide">
+    <div class="icon">🎯</div>
+    <div>
+      <h3>The unlock</h3>
+      <div class="q">Answer each question on camera <b>once</b> — and it keeps selling for you for years, while you sleep. That's the whole game.</div>
+    </div>
+  </div>
+</div>
+<div class="bottom">💡 You're not "making content." You're <b>answering the questions you already get on every estimate</b> — just on video, once.</div>
+</body></html>
