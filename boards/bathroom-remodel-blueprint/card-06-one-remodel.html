@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:40px 48px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#EAB308;font-weight:700;margin-bottom:8px}
+h2{font-size:36px;font-weight:800;margin-bottom:6px;line-height:1.2}
+h2 span{color:#10B981}
+.sub{font-size:16px;color:#9CA3AF;margin-bottom:26px;line-height:1.5}
+.timeline-wrap{margin-bottom:26px}
+.tl-label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#6B7280;font-weight:700;margin-bottom:12px}
+.timeline{display:flex;align-items:center;justify-content:space-between;position:relative}
+.timeline::before{content:'';position:absolute;top:26px;left:4%;right:4%;height:3px;background:linear-gradient(90deg,#6B7280,#10B981);border-radius:2px;z-index:0}
+.tl-step{display:flex;flex-direction:column;align-items:center;gap:8px;z-index:2;width:14%}
+.tl-dot{width:54px;height:54px;border-radius:50%;background:#1F2937;border:2px solid #374151;display:flex;align-items:center;justify-content:center;font-size:24px}
+.tl-step:last-child .tl-dot{border-color:#10B981;background:rgba(16,185,129,0.15)}
+.tl-step .name{font-size:13px;font-weight:700;color:#D1D5DB;text-align:center}
+.tl-step:last-child .name{color:#10B981}
+.harvest{flex:1;background:#1F2937;border-radius:16px;padding:22px 26px;display:flex;flex-direction:column}
+.harvest .h-head{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.harvest .h-head .arrow{font-size:20px;color:#10B981}
+.harvest .h-head span{font-size:14px;font-weight:700;color:#6EE7B7;text-transform:uppercase;letter-spacing:1px}
+.pieces{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;flex:1}
+.piece{background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.18);border-radius:10px;padding:12px 10px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.piece .pi{font-size:22px}
+.piece .pl{font-size:12px;color:#D1D5DB;font-weight:600;line-height:1.25}
+.bottom{margin-top:22px;background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.2);border-radius:12px;padding:16px 24px;font-size:16px;color:#FDE68A;line-height:1.5;text-align:center}
+.bottom b{color:#fff}
+</style></head><body>
+<div class="tag">The Multiplier · My Favorite Trick</div>
+<h2>One remodel = <span>a whole month of content.</span></h2>
+<p class="sub">Most contractors think "we finished the project." I think: "great — we just filmed 30 posts." Same job. One camera.</p>
+<div class="timeline-wrap">
+  <div class="tl-label">Film the journey as you go →</div>
+  <div class="timeline">
+    <div class="tl-step"><div class="tl-dot">🚚</div><div class="name">Arrival</div></div>
+    <div class="tl-step"><div class="tl-dot">🔨</div><div class="name">Demo</div></div>
+    <div class="tl-step"><div class="tl-dot">🚰</div><div class="name">Plumbing</div></div>
+    <div class="tl-step"><div class="tl-dot">🧱</div><div class="name">Tile</div></div>
+    <div class="tl-step"><div class="tl-dot">🪞</div><div class="name">Vanity</div></div>
+    <div class="tl-step"><div class="tl-dot">💡</div><div class="name">Lighting</div></div>
+    <div class="tl-step"><div class="tl-dot">✨</div><div class="name">Reveal</div></div>
+  </div>
+</div>
+<div class="harvest">
+  <div class="h-head"><span class="arrow">↳</span><span>That ONE job becomes…</span></div>
+  <div class="pieces">
+    <div class="piece"><div class="pi">🎥</div><div class="pl">Full walkthrough</div></div>
+    <div class="piece"><div class="pi">⚠️</div><div class="pl">Mistake-to-avoid clip</div></div>
+    <div class="piece"><div class="pi">💡</div><div class="pl">5 quick tips</div></div>
+    <div class="piece"><div class="pi">💬</div><div class="pl">Customer testimonial</div></div>
+    <div class="piece"><div class="pi">💳</div><div class="pl">Pricing &amp; financing</div></div>
+    <div class="piece"><div class="pi">🧱</div><div class="pl">Material breakdown</div></div>
+    <div class="piece"><div class="pi">⏱️</div><div class="pl">Time-lapse build</div></div>
+    <div class="piece"><div class="pi">🪄</div><div class="pl">Before &amp; after reveal</div></div>
+    <div class="piece"><div class="pi">❓</div><div class="pl">FAQ answers</div></div>
+    <div class="piece"><div class="pi">🔨</div><div class="pl">Behind the scenes</div></div>
+  </div>
+</div>
+<div class="bottom">💡 You don't need more projects. You need to <b>squeeze every project for everything it's worth.</b></div>
+</body></html>
