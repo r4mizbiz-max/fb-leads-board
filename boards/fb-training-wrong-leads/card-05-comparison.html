@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:36px 48px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#EAB308;font-weight:700;margin-bottom:6px}
+h2{font-size:34px;font-weight:800;margin-bottom:4px;line-height:1.2}
+h2 span{color:#10B981}
+.sub{font-size:15px;color:#9CA3AF;margin-bottom:18px;line-height:1.45;max-width:980px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:26px;flex:1;min-height:0}
+.col{display:flex;flex-direction:column;min-height:0}
+.col-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.col-head .mark{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;flex-shrink:0}
+.bad .mark{background:rgba(239,68,68,0.16);color:#EF4444}
+.good .mark{background:rgba(16,185,129,0.16);color:#10B981}
+.col-head .ht{font-size:16px;font-weight:800}
+.bad .ht{color:#FCA5A5}.good .ht{color:#6EE7B7}
+.frame{flex:1;min-height:0;border-radius:12px;overflow:hidden;background:#0a0a0a;display:flex;align-items:center;justify-content:center;border:2px solid}
+.bad .frame{border-color:rgba(239,68,68,0.4)}
+.good .frame{border-color:rgba(16,185,129,0.4)}
+.frame img{width:100%;height:100%;object-fit:contain;display:block}
+.tagline{margin-top:10px;border-radius:10px;padding:11px 16px;font-size:13.5px;line-height:1.35;display:flex;align-items:center;gap:9px}
+.bad .tagline{background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.22);color:#FCA5A5}
+.good .tagline{background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.22);color:#6EE7B7}
+.tagline b{color:#fff}
+.tagline .lead{font-size:11px;text-transform:uppercase;letter-spacing:1px;font-weight:800;opacity:0.9;flex-shrink:0}
+.bottom{margin-top:16px;background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.2);border-radius:12px;padding:14px 24px;font-size:15.5px;color:#FDE68A;line-height:1.45;text-align:center}
+.bottom b{color:#fff}
+</style></head><body>
+<div class="tag">Same Budget · Opposite Homeowners</div>
+<h2>Change the message, change the <span>buyer.</span></h2>
+<p class="sub">Same spend. Same service. Same market. The only variable that changed is the <b>words</b> — and it completely flips who Facebook goes hunting for.</p>
+<div class="compare">
+  <div class="col bad">
+    <div class="col-head"><span class="mark">✕</span><span class="ht">The Wrong Signal</span></div>
+    <div class="frame"><img src="bad-ad.png" alt="Discount-driven bathroom remodel ad"></div>
+    <div class="tagline"><span class="lead">Trains FB to find →</span><span><b>Price shoppers</b> hunting the lowest quote</span></div>
+  </div>
+  <div class="col good">
+    <div class="col-head"><span class="mark">✓</span><span class="ht">The Right Signal</span></div>
+    <div class="frame"><img src="good-ad.png" alt="Premium craftsmanship bathroom remodel ad"></div>
+    <div class="tagline"><span class="lead">Trains FB to find →</span><span><b>Quality buyers</b> ready to invest in the right job</span></div>
+  </div>
+</div>
+<div class="bottom">💡 Both cost the exact same to run. One fills your calendar with <b>tire-kickers</b> — the other with <b>homeowners who close.</b></div>
+</body></html>

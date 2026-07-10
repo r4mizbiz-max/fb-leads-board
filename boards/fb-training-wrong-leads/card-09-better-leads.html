@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;position:relative;text-align:center;padding:56px}
+.glow{position:absolute;top:-140px;left:50%;transform:translateX(-50%);width:820px;height:500px;background:radial-gradient(ellipse,rgba(16,185,129,0.12),transparent 70%);pointer-events:none}
+.corner-tl,.corner-br{position:absolute;width:60px;height:60px;border:2px solid rgba(16,185,129,0.15)}
+.corner-tl{top:24px;left:24px;border-right:0;border-bottom:0;border-radius:4px 0 0 0}
+.corner-br{bottom:24px;right:24px;border-left:0;border-top:0;border-radius:0 0 4px 0}
+.tag{font-size:13px;text-transform:uppercase;letter-spacing:3px;color:#10B981;font-weight:700;margin-bottom:24px;position:relative}
+.equation{display:flex;align-items:center;gap:22px;margin-bottom:30px;position:relative}
+.eq-box{background:#1F2937;border-radius:14px;padding:22px 30px;text-align:center}
+.eq-box .t{font-size:30px;font-weight:900;letter-spacing:-0.5px;line-height:1}
+.eq-box.msg .t{color:#F9FAFB}
+.eq-box.leads{background:linear-gradient(135deg,rgba(16,185,129,0.18),rgba(16,185,129,0.05));border:1px solid rgba(16,185,129,0.4)}
+.eq-box.leads .t{color:#10B981}
+.eq-op{font-size:38px;font-weight:800;color:#6B7280}
+.body-text{font-size:19px;color:#D1D5DB;line-height:1.6;max-width:780px;margin-bottom:28px;position:relative}
+.body-text b{color:#fff}
+.worth{display:flex;align-items:center;gap:18px;position:relative}
+.worth .w{background:#1F2937;border:1px solid #374151;border-radius:12px;padding:16px 22px;text-align:center}
+.worth .w .v{font-size:26px;font-weight:900;line-height:1}
+.worth .w.one .v{color:#10B981}.worth .w.ten .v{color:#9CA3AF}
+.worth .w .l{font-size:12px;color:#6B7280;margin-top:6px;line-height:1.3}
+.worth .gt{font-size:24px;font-weight:900;color:#10B981}
+.brand{position:absolute;bottom:32px;right:40px;display:flex;align-items:center;gap:10px}
+.brand .dot{width:12px;height:12px;background:#10B981;border-radius:50%}
+.brand span{font-size:16px;font-weight:600;color:#6B7280;letter-spacing:1px;text-transform:uppercase}
+.brand-left{position:absolute;bottom:36px;left:40px;font-size:12px;color:#4B5563;letter-spacing:1px;text-transform:uppercase}
+</style></head><body>
+<div class="glow"></div>
+<div class="corner-tl"></div>
+<div class="corner-br"></div>
+<div class="tag">The Takeaway</div>
+<div class="equation">
+  <div class="eq-box msg"><div class="t">Better Messaging</div></div>
+  <div class="eq-op">=</div>
+  <div class="eq-box leads"><div class="t">Better Leads</div></div>
+</div>
+<p class="body-text">The best ad doesn't generate the <i>most</i> leads. It generates the <b>right</b> leads. Stop trying to game the algorithm — start giving it better signals.</p>
+<div class="worth">
+  <div class="w one"><div class="v">1</div><div class="l">homeowner ready<br>to invest in quality</div></div>
+  <div class="gt">&gt;</div>
+  <div class="w ten"><div class="v">10</div><div class="l">chasing the<br>cheapest quote</div></div>
+</div>
+<div class="brand-left">© 2026 Rambitious Media</div>
+<div class="brand"><div class="dot"></div><span>Rambitious Media</span></div>
+</body></html>
