@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:44px 48px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#EAB308;font-weight:700;margin-bottom:8px}
+h2{font-size:36px;font-weight:800;margin-bottom:6px;line-height:1.2}
+h2 em{color:#EF4444;font-style:normal}
+.sub{font-size:16px;color:#9CA3AF;margin-bottom:24px;line-height:1.5;max-width:940px}
+.main{display:grid;grid-template-columns:0.85fr 1.15fr;gap:26px;flex:1}
+.pay{background:linear-gradient(160deg,#1f2937,#161e2b);border:1px solid rgba(234,179,8,0.28);border-radius:16px;padding:28px;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.pay .lbl{font-size:13px;text-transform:uppercase;letter-spacing:2px;color:#9CA3AF;font-weight:700;margin-bottom:12px}
+.pay .amt{font-size:72px;font-weight:900;color:#EAB308;letter-spacing:-2px;line-height:1;margin-bottom:16px}
+.pay .note{font-size:15px;color:#D1D5DB;line-height:1.5}
+.pay .note b{color:#fff}
+.pnl{background:#1F2937;border-radius:16px;padding:22px 26px;display:flex;flex-direction:column}
+.pnl .h{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#EF4444;font-weight:800;margin-bottom:14px}
+.line{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:14.5px}
+.line .n{display:flex;align-items:center;gap:10px;color:#D1D5DB}
+.line .n .i{font-size:16px}
+.line .v{color:#FCA5A5;font-weight:700;font-family:ui-monospace,Menlo,monospace}
+.line.profit{border-bottom:0;margin-top:6px;padding-top:14px;border-top:1px dashed rgba(234,179,8,0.3)}
+.line.profit .n{color:#fff;font-weight:800;font-size:16px}
+.line.profit .v{color:#EAB308;font-weight:900}
+.bottom{margin-top:22px;background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.2);border-radius:12px;padding:16px 24px;font-size:16px;color:#FDE68A;line-height:1.5;text-align:center}
+.bottom b{color:#fff}
+</style></head><body>
+<div class="tag">Follow The Money</div>
+<h2>That $247 you pay isn't <em>profit.</em> Watch where it actually goes.</h2>
+<p class="sub">Assume they're covering the advertising themselves. Before a single dollar becomes margin, it has to get past all of this:</p>
+<div class="main">
+  <div class="pay">
+    <div class="lbl">You Pay</div>
+    <div class="amt">$247</div>
+    <div class="note">…and this is where it goes <b>before</b> anyone can invest a dime in <b>your appointment's quality.</b></div>
+  </div>
+  <div class="pnl">
+    <div class="h">Where the $247 disappears</div>
+    <div class="line"><span class="n"><span class="i">📣</span> Ad spend (Meta gets paid first)</span><span class="v">– $$$</span></div>
+    <div class="line"><span class="n"><span class="i">👥</span> Appointment setters / callers</span><span class="v">– $$</span></div>
+    <div class="line"><span class="n"><span class="i">🧑‍💼</span> Labor &amp; management</span><span class="v">– $$</span></div>
+    <div class="line"><span class="n"><span class="i">💻</span> Software · CRM · dialers</span><span class="v">– $</span></div>
+    <div class="line"><span class="n"><span class="i">💳</span> Payment processing</span><span class="v">– $</span></div>
+    <div class="line"><span class="n"><span class="i">🔁</span> Refunds &amp; replacements</span><span class="v">– $$</span></div>
+    <div class="line"><span class="n"><span class="i">🏢</span> Overhead</span><span class="v">– $</span></div>
+    <div class="line profit"><span class="n">💰 Profit they still need</span><span class="v">= ???</span></div>
+  </div>
+</div>
+<div class="bottom">💡 If there's almost no margin left in the appointment, they need one of two things: <b>insane efficiency</b> — or <b>compromises.</b></div>
+</body></html>

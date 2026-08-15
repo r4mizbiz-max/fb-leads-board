@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:800px;background:#111827;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:#fff;overflow:hidden;padding:38px 48px;display:flex;flex-direction:column}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#EAB308;font-weight:700;margin-bottom:6px}
+h2{font-size:34px;font-weight:800;margin-bottom:4px;line-height:1.2}
+h2 em{color:#EF4444;font-style:normal}h2 span{color:#10B981}
+.sub{font-size:15px;color:#9CA3AF;margin-bottom:18px;line-height:1.45}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:22px;flex:1}
+.prov{border-radius:16px;padding:22px 24px;display:flex;flex-direction:column}
+.prov.a{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.25)}
+.prov.b{background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.25)}
+.prov .ph{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.prov .name{font-size:17px;font-weight:800}
+.prov.a .name{color:#FCA5A5}.prov.b .name{color:#6EE7B7}
+.prov .chip{font-size:11px;text-transform:uppercase;letter-spacing:1px;font-weight:800;padding:4px 10px;border-radius:6px}
+.prov.a .chip{background:rgba(239,68,68,0.15);color:#EF4444}
+.prov.b .chip{background:rgba(16,185,129,0.15);color:#10B981}
+.mrow{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:15px}
+.mrow .k{color:#9CA3AF}
+.mrow .v{font-weight:800;font-family:ui-monospace,Menlo,monospace;color:#E5E7EB}
+.mrow.spend .v{color:#F9FAFB}
+.result{margin-top:auto;padding-top:14px;display:flex;gap:12px}
+.rbox{flex:1;border-radius:10px;padding:12px;text-align:center}
+.prov.a .rbox{background:rgba(239,68,68,0.1)}
+.prov.b .rbox{background:rgba(16,185,129,0.12)}
+.rbox .rl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#9CA3AF;margin-bottom:4px;font-weight:700}
+.rbox .rv{font-size:26px;font-weight:900;letter-spacing:-0.5px;line-height:1}
+.prov.a .rbox .rv{color:#EF4444}.prov.b .rbox .rv{color:#10B981}
+.bottom{margin-top:18px;background:rgba(234,179,8,0.1);border:1px solid rgba(234,179,8,0.25);border-radius:12px;padding:16px 24px;font-size:17px;color:#FDE68A;line-height:1.4;text-align:center;font-weight:600}
+.bottom b{color:#fff;font-weight:800}
+</style></head><body>
+<div class="tag">Fifth-Grade Math · The Real Cost</div>
+<h2>Here's where <em>cheap</em> becomes <span>expensive.</span></h2>
+<p class="sub">Same 10 appointments. Wildly different sticker prices. Watch what actually matters — the number at the bottom.</p>
+<div class="compare">
+  <div class="prov a">
+    <div class="ph"><span class="name">Provider A · "the cheap one"</span><span class="chip">$247 each</span></div>
+    <div class="mrow spend"><span class="k">10 appointments × $247</span><span class="v">$2,470</span></div>
+    <div class="mrow"><span class="k">Actually show up</span><span class="v">2 of 10</span></div>
+    <div class="mrow"><span class="k">Close</span><span class="v">0</span></div>
+    <div class="mrow"><span class="k">Revenue generated</span><span class="v">$0</span></div>
+    <div class="result">
+      <div class="rbox"><div class="rl">You spent</div><div class="rv">$2,470</div></div>
+      <div class="rbox"><div class="rl">Cost per sale</div><div class="rv">∞</div></div>
+    </div>
+  </div>
+  <div class="prov b">
+    <div class="ph"><span class="name">Provider B · "the pricey one"</span><span class="chip">$600 each</span></div>
+    <div class="mrow spend"><span class="k">10 appointments × $600</span><span class="v">$6,000</span></div>
+    <div class="mrow"><span class="k">Actually show up</span><span class="v">8 of 10</span></div>
+    <div class="mrow"><span class="k">Close</span><span class="v">2</span></div>
+    <div class="mrow"><span class="k">Revenue (2 × $20k jobs)</span><span class="v">$40,000</span></div>
+    <div class="result">
+      <div class="rbox"><div class="rl">You spent</div><div class="rv">$6,000</div></div>
+      <div class="rbox"><div class="rl">Cost per sale</div><div class="rv">$3,000</div></div>
+    </div>
+  </div>
+</div>
+<div class="bottom">$2,470 → <b>$0.</b>&nbsp;&nbsp;$6,000 → <b>$40,000.</b>&nbsp;&nbsp;So… which appointment was actually cheaper? 🤔</div>
+</body></html>
